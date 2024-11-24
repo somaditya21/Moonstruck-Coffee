@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moonstruck Coffee</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Josefin Sans"', "sans-serif"],
+            josefin: ['"Josefin Sans"', "sans-serif"],
+          },
+          backgroundImage: {
+            "gradient-border":
+              "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #1D71B8 100%)",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Italiana&family=Antonio+Fischer&display=swap");
+
+    body {
+      font-family: "Italiana", serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Josefin Sans", cursive;
+    }
+  </style>
+</head>
+
+<body class="bg-[#0D1B2A] text-white">
+
+  <!-- Header -->
+  <header class="bg-none fixed font-josefin left-0 md:bg-[#000d17] md:opacity-50 md:relative shadow-lg top-0 w-full z-50">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="logo flex items-center">
+        <img src="images/logo.png" alt="Logo" class="w-10 h-10 mr-2 md:w-[100px] md:h-[100px]" />
+      </div>
+
+      <!-- Hamburger Menu  -->
+      <button id="menu-toggle" class="text-white text-2xl focus:outline-none md:hidden">
+        ☰
+      </button>
+
+      <!-- Navigation Menu (Initially Hidden on Mobile) -->
+      <nav id="menu" class="hidden md:flex space-x-6 text-white text-sm uppercase">
+        <a href="index.html" class="hover:text-blue-400">Home</a>
+        <a href="about.html" class="hover:text-blue-400">About</a>
+        <a href="#" class="hover:text-blue-400">Product</a>
+        <a href="#" class="hover:text-blue-400">Gallery</a>
+        <a href="#" class="hover:text-blue-400">Blog</a>
+        <a href="#" class="hover:text-blue-400">Contact Us</a>
+      </nav>
+
+      <!-- Book A Table Button (Visible on Desktop, Hidden on Mobile) -->
+      <a href="#" class="hidden md:inline-block bg-blue-500 text-white px-4 py-2 rounded-lg">
+        Book A Table
+      </a>
+    </div>
+
+    <!-- Mobile Menu (Initially Hidden) -->
+    <div id="mobile-menu"
+      class="md:hidden absolute top-0 left-0 w-full bg-[#000D17] text-white px-4 py-6 space-y-4 hidden">
+      <a href="#" class="block text-lg hover:text-blue-400">Home</a>
+      <a href="#" class="block text-lg hover:text-blue-400">About</a>
+      <a href="#" class="block text-lg hover:text-blue-400">Product</a>
+      <a href="#" class="block text-lg hover:text-blue-400">Gallery</a>
+      <a href="#" class="block text-lg hover:text-blue-400">Blog</a>
+      <a href="#" class="block text-lg hover:text-blue-400">Contact Us</a>
+      <a href="#" class="block text-lg bg-blue-500 text-white px-4 py-2 rounded-lg">
+        Book A Table
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="absolute top-0 left-0 z-10">
+    <img src="images/Smoke.png" alt="" class="w-full" />
+  </div>
+
+  <section class="relative flex flex-col-reverse md:flex-row">
+    <!-- Sidebar Navigation -->
+    <div
+      class="bg-[#000D17] flex flex-col items-center justify-between md:flex-row md:justify-center md:py-0 md:space-y-0 md:w-[140px] py-4 space-y-4 w-full">
+      <div class="flex flex-row items-center md:flex-col space-y-0">
+        <!-- Top Icon -->
+        <span class="-rotate-90 icon md:mb-2 md:mr-0 md:mt-4 md:rotate-0 mr-6">
+          <svg width="15" height="48" viewBox="0 0 15 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.53033 0.469669C8.23744 0.176777 7.76256 0.176777 7.46967 0.469669L2.6967 5.24264C2.4038 5.53553 2.4038 6.01041 2.6967 6.3033C2.98959 6.5962 3.46446 6.5962 3.75736 6.3033L8 2.06066L12.2426 6.3033C12.5355 6.5962 13.0104 6.5962 13.3033 6.3033C13.5962 6.01041 13.5962 5.53553 13.3033 5.24264L8.53033 0.469669ZM8.75 39L8.75 1L7.25 1L7.25 39L8.75 39Z"
+              fill="white"></path>
+            <circle cx="7.5" cy="40.5" r="7" stroke="white"></circle>
+          </svg>
+        </span>
+
+        <!-- Navigation Links -->
+        <div class="flex flex-row gap-6 items-center md:flex-col md:space-x-0 md:space-y-2 sd-nav space-x-4">
+          <a href="#" class="block text-white hover:text-blue-400">1</a>
+          <a href="#" class="block text-white hover:text-blue-400 active">2</a>
+          <a href="#" class="block text-white hover:text-blue-400">3</a>
+        </div>
+
+        <!-- Bottom Icon -->
+        <span class="-rotate-90 icon md:ml-0 md:ml-o md:mt-2 md:rotate-0 ml-8 mt-4">
+          <svg width="15" height="48" viewBox="0 0 15 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.53033 47.5303C8.23744 47.8232 7.76256 47.8232 7.46967 47.5303L2.6967 42.7574C2.4038 42.4645 2.4038 41.9896 2.6967 41.6967C2.98959 41.4038 3.46446 41.4038 3.75736 41.6967L8 45.9393L12.2426 41.6967C12.5355 41.4038 13.0104 41.4038 13.3033 41.6967C13.5962 41.9896 13.5962 42.4645 13.3033 42.7574L8.53033 47.5303ZM8.75 9L8.75 47L7.25 47L7.25 9L8.75 9Z"
+              fill="#9E9E9E"></path>
+            <circle cx="7.5" cy="7.5" r="7" transform="matrix(1 0 0 -1 0 15)" stroke="#9E9E9E"></circle>
+          </svg>
+        </span>
+      </div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="bg-cover bg-center py-20 md:py-0 h-[calc(100vh-145px)] flex items-center justify-center"
+      style="background-image: url('images/hero-bg.png')">
+      <div class="container mx-auto px-4 relative text-center text-white top-0 top-12">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+          Welcome to Moonstruck Coffee
+        </h1>
+        <p class="text-lg font-josefin font-semibold md:text-xl mb-6">
+          Recipes Every Week Updates
+        </p>
+        <button class="bg-blue-500 px-6 py-3 rounded-lg text-white font-semibold">
+          Explore Now
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="bg-[#000D17] md:py-16 py-8">
+    <h2 class=" md:hidden flex items-center  md:justify-start text-2xl font-medium uppercase px-4
+    before:content-[''] before:inline-block before:w-[80px] md:before:w-[120px] before:h-1 
+    before:bg-blue-500 before:mr-4">
+      About Us
+    </h2>
+    <div
+      class="flex flex-col-reverse gap-8 items-center justify-between md:container md:flex-row md:space-y-0 mx-auto px-0 space-y-8">
+      <!-- Text Content -->
+      <div class="font-Italiana md:text-left md:w-1/2 px-4 text-left w-full">
+        <!-- Heading -->
+        <h2 class=" hidden md:flex items-center justify-center md:justify-start text-2xl font-medium uppercase mb-4 
+          before:content-[''] before:inline-block before:w-[80px] md:before:w-[120px] before:h-1 
+          before:bg-blue-500 before:mr-4">
+          About Us
+        </h2>
+        <!-- Title -->
+        <p class="text-2xl md:text-6xl font-Italiana mb-6">
+          We invite you to visit our Moonstruck Coffee.
+        </p>
+        <!-- Subtitle -->
+        <p class="text-lg md:text-2xl font-light text-[#9E9E9E] font-josefin mb-6">
+          Repudiandae dignissimos fugiat sit nam. Tempore aspernatur quae repudiandae dolorem,
+          beatae dolorum, praesentium itaque et quam quaerat.
+        </p>
+        <!-- Button -->
+        <a href="#" class="bg-blue-500 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-blue-600 
+          transition duration-300">
+          Read More
+        </a>
+      </div>
+
+      <!-- Image -->
+      <div class="md:w-1/2 px-4 w-full">
+        <img src="images/about-bg.png" alt="About Us" class="mx-auto rounded-lg shadow-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Vedio Section -->
+  <section class="bg-[#000D17] flex items-center justify-center md:py-16 py-8">
+    <div class="container px-4 relative w-full">
+      <!-- Background Image -->
+      <img alt="A man and a woman cooking together in a modern kitchen"
+        class="h-[calc(100vh-145px)] md:h-full opacity-50 w-full" height="1080" src="images/video-bg.png">
+      <!-- Overlay Content -->
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-white px-4">
+        <!-- Play Button -->
+        <button class="text-6xl mb-4">
+          <img src="images/playicon.svg" alt="Play Button" class="w-16 md:w-20">
+        </button>
+        <!-- Heading -->
+        <h1 class="font-Italiana font-normal md:text-3xl md:text-[50px] px-4 text-[22px] text-center text-xl">
+          Watch Moonstruck Coffee Cooking Videos
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="md:py-16 py-8 bg-[#000D17] font-Italiana relative">
+    <!-- Smoke Background -->
+    <div class="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-50"
+      style="background-image: url('images/Smoke.png');"></div>
+
+    <!-- Content -->
+    <div class="relative container mx-auto text-center px-4">
+      <h3
+        class="flex text-lg md:text-2xl justify-center items-center font-medium uppercase mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
+        FEATURES
+      </h3>
+      <p class="text-2xl md:text-6xl font-Italiana font-normal mb-6 text-white">
+        Why People Choose Us?
+      </p>
+
+      <!-- Features Section -->
+      <div class="flex flex-col gap-8 justify-center md:flex-row md:justify-between mt-24">
+        <!-- Feature 1 -->
+        <div class="p-4 relative sm:w-[30%] text-center w-full" style="
+        border-image-source: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #1D71B8 100%);
+        border-image-slice: 1;
+        border-width: 1px;
+        height: 210px;
+    ">
+          <div class="box-content" style="position: absolute; z-index: 11; left: 0; right: 0; ">
+            <div class="text-6xl mb-4 flex justify-center">
+              <img src="images/cook.svg" alt="Cook Icon" class="w-16 h-16">
+            </div>
+            <h3 class="text-2xl md:text-3xl font-normal mb-2 text-white">
+              Product for Every Taste
+            </h3>
+            <p class="text-sm md:text-base text-gray-300">Carefully crafted for you.</p>
+          </div>
+          <div class="box-decoration" style="
+        opacity: 18%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(0, 13, 23, 0) 0%, #1D71B8 100%);
+        height: 210px;
+    ">
+
+
+          </div>
+
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-4 relative sm:w-[30%] text-center w-full" style="
+        border-image-source: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #1D71B8 100%);
+        border-image-slice: 1;
+        border-width: 1px;
+        height: 210px;
+    ">
+          <div class="box-content" style="position: absolute; z-index: 11; left: 0; right: 0; ">
+            <div class="text-6xl mb-4 flex justify-center">
+              <img src="images/Group.svg" alt="Quality Beans Icon" class="w-16 h-16">
+            </div>
+            <h3 class="text-2xl md:text-3xl font-normal mb-2 text-white">
+              Always Quality Beans
+            </h3>
+            <p class="text-sm md:text-base text-gray-300">Only the best coffee beans.</p>
+          </div>
+          <div class="box-decoration" style="
+        opacity: 18%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(0, 13, 23, 0) 0%, #1D71B8 100%);
+        height: 210px;
+    ">
+
+
+          </div>
+
+        </div>
+        <!-- Feature 3 -->
+        <div class="p-4 relative sm:w-[30%] text-center w-full" style="
+        border-image-source: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #1D71B8 100%);
+        border-image-slice: 1;
+        border-width: 1px;
+        height: 210px;
+    ">
+          <div class="box-content" style="position: absolute; z-index: 11; left: 0; right: 0; ">
+            <div class="text-6xl mb-4 flex justify-center">
+              <img src="images/cooking.svg" alt="Baristas Icon" class="w-16 h-16">
+            </div>
+            <h3 class="text-2xl md:text-3xl font-normal mb-2 text-white">
+              Experienced Baristas
+            </h3>
+            <p class="text-sm md:text-base text-gray-300">Expertly made coffee.</p>
+          </div>
+          <div class="box-decoration" style="
+        opacity: 18%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(0, 13, 23, 0) 0%, #1D71B8 100%);
+        height: 210px;
+    ">
+
+
+          </div>
+
+        </div>
+
+
+        
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Blog Section -->
+  <section class="md:py-16 py-8 bg-[#000D17] text-white">
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h3
+          class="flex text-lg md:text-2xl justify-center items-center font-medium uppercase mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
+          Blog
+        </h3>
+        <p class="text-2xl md:text-6xl font-Italiana font-normal mb-6">
+          Latest Publications
+        </p>
+      </div>
+
+      <!-- Blog Posts -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <!-- Post 1 -->
+        <div class="flex bg-[#0A1A2E] p-6 rounded-lg items-center">
+          <img src="images/Pancakes.png" alt="Pancakes in Chocolate" class="object-cover rounded-md mr-4" />
+          <div>
+            <h4 class="font-normal mb-2 text-3xl text-white">
+              Pancakes in Chocolate
+            </h4>
+            <p class="text-2xl font-light text-gray-400 mb-2 font-josefin">
+              Repudiandae dignissimos fugiat sit nam. Tempore aspernatur quae
+              repudiandae.
+            </p>
+            <a href="#" class="text-blue-400 font-semibold flex items-center hover:underline">
+              <img src="images/arrow.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <!-- Post 2 -->
+        <div class="flex bg-[#0A1A2E] p-6 rounded-lg items-center">
+          <img src="images/Breakfast.jpg" alt="Business Breakfast" class="object-cover rounded-md mr-4" />
+          <div>
+            <h4 class="font-normal mb-2 text-3xl">Business Breakfast</h4>
+            <p class="text-2xl font-light text-gray-400 mb-2 font-josefin">
+              Repudiandae dignissimos fugiat sit nam. Tempore aspernatur quae
+              repudiandae.
+            </p>
+            <a href="#" class="text-blue-400 font-semibold flex items-center hover:underline">
+              <img src="images/arrow.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <!-- Post 3 -->
+        <div class="flex bg-[#0A1A2E] p-6 rounded-lg items-center">
+          <img src="images/Tuna.jpg" alt="Tuna & Tomatoes" class="object-cover rounded-md mr-4" />
+          <div>
+            <h4 class="font-normal mb-2 text-3xl">Tuna & Tomatoes</h4>
+            <p class="text-2xl font-light text-gray-400 mb-2 font-josefin">
+              Repudiandae dignissimos fugiat sit nam. Tempore aspernatur quae
+              repudiandae.
+            </p>
+            <a href="#" class="text-blue-400 font-semibold flex items-center hover:underline">
+              <img src="images/arrow.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <!-- Post 4 -->
+        <div class="flex bg-[#0A1A2E] p-6 rounded-lg items-center">
+          <img src="images/salmon.jpg" alt="Air Fryer Salmon" class="object-cover rounded-md mr-4" />
+          <div>
+            <h4 class="font-normal mb-2 text-3xl">Air Fryer Salmon</h4>
+            <p class="text-2xl font-light text-gray-400 mb-2 font-josefin">
+              Repudiandae dignissimos fugiat sit nam. Tempore aspernatur quae
+              repudiandae.
+            </p>
+            <a href="#" class="text-blue-400 font-semibold flex items-center hover:underline">
+              <img src="images/arrow.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- View All Button -->
+      <div class="text-center mt-8 font-josefin">
+        <a href="#" class="text-2xl px-8 py-3 bg-blue-500 text-white font-normal rounded-lg hover:bg-blue-600">
+          View All
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION  Section -->
+  <section class="md:py-16 py-8 bg-[#000D17] text-white opacity-50" style="background-image: url('images/hero-bg.png')">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h3
+          class="flex items-center text-lg uppercase font-medium mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
+          Reservation
+        </h3>
+      </div>
+
+      <div class="flex justify-between gap-8 items-center">
+        <div class="text-center max-w-md">
+          <p class="text-6xl mb-4">Open Timing</p>
+          <p class="text-lg font-josefin font-semibold font-light mb-6">
+            Plan your visit with us. Select a time that works for you!
+          </p>
+          <a href="#" class="bg-blue-500 px-8 py-3 text-white font-semibold rounded-lg hover:bg-blue-600 transition">
+            Book A Table
+          </a>
+        </div>
+
+        <div class="p-6 border border-gray-700 rounded-lg bg-[#0A1622]">
+          <p class="text-xl font-medium text-center mb-4">Our Timings</p>
+          <ul class="text-center space-y-4">
+            <li>
+              <span class="font-semibold text-blue-500">Sunday to Tuesday:</span>
+              <span class="block text-lg">08:00 - 22:00</span>
+            </li>
+            <li>
+              <span class="font-semibold text-blue-500">Friday to Saturday:</span>
+              <span class="block text-lg">11:00 - 19:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="md:py-16 py-8 bg-[#000D17] font-Italiana text-white">
+    <div class="container mx-auto text-center mb-16">
+      <div class="flex flex-wrap justify-center gap-8 font-josefin">
+        <div class="text-center w-full sm:w-auto">
+          <p class="text-4xl sm:text-6xl font-normal font-Italiana">
+            200<span class="text-blue-500">+</span>
+          </p>
+          <p class="text-lg font-josefin font-semibold">Visitors Daily</p>
+        </div>
+        <div class="text-center w-full sm:w-auto">
+          <p class="text-4xl sm:text-6xl font-normal font-Italiana">
+            400<span class="text-blue-500">+</span>
+          </p>
+          <p class="text-lg font-josefin font-semibold">Deliveries Monthly</p>
+        </div>
+        <div class="text-center w-full sm:w-auto">
+          <p class="text-4xl sm:text-6xl font-normal font-Italiana">
+            100<span class="text-blue-500">%</span>
+          </p>
+          <p class="text-lg font-josefin font-semibold">Positive Feedback</p>
+        </div>
+        <div class="text-center w-full sm:w-auto">
+          <p class="text-4xl sm:text-6xl font-normal font-Italiana">
+            40<span class="text-blue-500">+</span>
+          </p>
+          <p class="text-lg font-josefin font-semibold">Awards and Honors</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mb-12">
+      <h3
+        class="flex justify-center items-center text-lg uppercase font-medium mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
+        Gallery
+      </h3>
+      <p class="text-4xl sm:text-6xl font-Italiana font-normal mb-6">Our Photo Gallery</p>
+    </div>
+
+    <!-- Gallery -->
+    <div class="container md:px-0 mx-auto px-4">
+      <div class="gap-0 grid grid-cols-1 md:gap-4 md:grid-cols-2 sm:grid-cols-2">
+        <div class="relative group">
+          <img src="./images/Rectangle 16.jpg" alt="Caprese" class="w-full h-full object-cover">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <p class="text-xl text-white">Caprese</p>
+          </div>
+        </div>
+        <div class="gap-0 md:gap-4 grid grid-cols-2 md:gap-4 sm:grid-cols-2">
+          <div class="relative group">
+            <img src="./images/Rectangle 21.jpg" alt="Tacos" class="w-full h-full object-cover">
+            <div
+              class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-xl text-white">Tacos</p>
+            </div>
+          </div>
+          <div class="relative group">
+            <img src="./images/Rectangle 18.jpg" alt="Pancakes" class="w-full h-full object-cover">
+            <div
+              class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-xl text-white">Pancakes</p>
+            </div>
+          </div>
+          <div class="relative group">
+            <img src="./images/Rectangle 19.jpg" alt="Burger" class="w-full h-full object-cover">
+            <div
+              class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-xl text-white">Burger</p>
+            </div>
+          </div>
+          <div class="relative group">
+            <img src="./images/Rectangle 20.jpg" alt="Dish" class="w-full h-full object-cover">
+            <div
+              class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-xl text-white">Dish</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-8 font-Josefin">
+      <a href="#" class="bg-blue-500 px-8 py-3 rounded-lg text-white font-medium hover:bg-blue-600">
+        View All
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Testimonials Section -->
+  <section class="md:py-16 py-8 bg-[#000D17] text-white font-Italiana">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="flex justify-center items-center text-lg uppercase font-medium mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
+        Testimonials
+      </h3>
+      <p class="text-6xl font-Italiana font-normal mb-6">
+        What Our Customers Say
+      </p>
+
+      <div class="flex flex-col gap-8 items-center md:flex-row">
+        <div class="relative w-1/2">
+    <div class="absolute flex items-center mb-4 -right-9 top-[-20px] flex">
+            <div class="bg-blue-600 flex h-[80px] p-3 rounded-full text-white top-0 w-[80px]">
+              <img src="images/Vector.svg" class=" w-[49px] mx-auto">
+            </div>
+          </div>
+          <img alt="A person sitting at a table by the window, smiling" class="rounded-lg shadow-lg" src="images/Rectangle 11.png">
+        </div>
+          
+        <div class="w-1/2 pl-8">
+          
+          <p class="text-gray-400 mb-4 font-josefin text-left">
+            Reprehenderit dignissimos fugiat sit nam. Tempore aspernatur quae
+            repudiandae dolorem, beatae dolorum, praesentium itaque et quam
+            quaerat.
+          </p>
+          <p class="text-gray-400 mb-4 font-josefin text-left">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley.
+          </p>
+          <p class="font-semibold text-blue-400 text-left">
+            Cameron Williamson
+          </p>
+          <div class="flex items-center mt-4">
+            <button class="text-gray-400 hover:text-white mx-2">
+              <i class="fas fa-arrow-left"> </i>
+            </button>
+            <button class="text-gray-400 hover:text-white mx-2">
+              <i class="fas fa-arrow-right"> </i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="md:py-16 py-8 bg-[#000D17] text-white font-Italiana bg-cover bg-center"
+  style="background-image: url('images/Smoke.png')">
+  <div class="container mx-auto px-4 md:px-0 font-Italiana">
+      <div class="flex flex-col lg:flex-row justify-between items-center mb-6 space-y-6 lg:space-y-0">
+          <div class="flex items-center space-x-4">
+              <img alt="Moonstruck Coffee logo" class="w-[101px] h-[101px]" src="images/logo.png" />
+              <h1 class="md:text-6xl text-2xl font-Italiana  font-normal text-center lg:text-left">MOONSTRUCK COFFEE</h1>
+          </div>
+          <!-- Social Media Icons -->
+          <div class="flex space-x-4">
+              <a class="text-white text-xl hover:text-blue-500 transition" href="#">
+                  <i class="fab fa-facebook-f"></i>
+              </a>
+              <a class="text-white text-xl hover:text-blue-500 transition" href="#">
+                  <i class="fab fa-twitter"></i>
+              </a>
+              <a class="text-white text-xl hover:text-blue-500 transition" href="#">
+                  <i class="fab fa-instagram"></i>
+              </a>
+          </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="flex flex-col lg:flex-row justify-between lg:items-start space-y-12 lg:space-y-0">
+          <!-- Left Section -->
+          <div class="">
+              <!-- Our Pages -->
+              <div class="flex flex-col gap-8 md:flex-row">
+                  <h2 class="text-2xl	font-josefin font-medium mb-2">OUR PAGES</h2>
+                  <nav class="flex flex-wrap gap-2 text-2xl	font-josefin font-normal text-[#9E9E9E]">
+                      <a class="hover:text-blue-500 transition  " href="#">Home</a>
+                      <a class="hover:text-blue-500 transition" href="#">About</a>
+                      <a class="hover:text-blue-500 transition" href="#">Product</a>
+                      <a class="hover:text-blue-500 transition" href="#">Gallery</a>
+                      <a class="hover:text-blue-500 transition" href="#">Blog</a>
+                      <a class="hover:text-blue-500 transition" href="#">Contact Us</a>
+                  </nav>
+              </div>
+              <!-- Contact Us -->
+              <div class="flex flex-col gap-8 md:flex-row mt-4 md:mt-0">
+                  <h2 class="text-2xl	font-josefin font-medium mb-2">CONTACT US</h2>
+                  <div class="text-2xl	font-josefin font-normal text-[#9E9E9E]">
+
+                    <p>+91 096647 21479 | moonstruckcoffee566@gmail.com</p>
+                    <p class="text-balance">SNS Atria Besides Happy Excelencia, opp. Jolly Party Plot, Vesu, Surat, Gujarat 395007</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Right Section -->
+          <div>
+              <h2 class="text-lg font-bold mb-2">LATEST POSTS</h2>
+              <div class="grid grid-cols-3 md:grid-cols-3 gap-4">
+                  <img alt="Image of a coffee cup and a croissant" class="w-full h-24 object-cover rounded-md"
+                      src="https://storage.googleapis.com/a1aa/image/UeUABlUtRMXfqEo1yI07cR3j1Cuf3Z32iYeR1OCYUl0RhXOPB.jpg" />
+                  <img alt="Image of a dish with vegetables" class="w-full h-24 object-cover rounded-md"
+                      src="https://storage.googleapis.com/a1aa/image/3yxBikdatbZIL9byq0lFEB8tBpQtHq0lCfPZJnMtTQQL8y5JA.jpg" />
+                  <img alt="Image of a coffee cup" class="w-full h-24 object-cover rounded-md"
+                      src="https://storage.googleapis.com/a1aa/image/lfePsyWe6TWf7TslfKORSLG7H2Tw31i2HepeiNzyFSV8I8y5JA.jpg" />
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+</body>
+<script>
+  document
+    .getElementById("menu-toggle")
+    .addEventListener("click", function () {
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenu.classList.toggle("hidden");
+    });
+
+  const mobileLinks = document.querySelectorAll("#mobile-menu a");
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.add("hidden");
+    });
+  });
+</script>
+
+</html>
