@@ -1,35 +1,4 @@
 
-.sd-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-    margin: 1rem 0;
-}
-
-.bg-cover.bg-center.py-20 {
-    flex: 1;
-    height: calc(100vh - 145px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-
-.bg-cover.bg-center.py-20:before {
-    content: "";
-    position: absolute;
-    left: 0%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: #000e1bd6;
-}
-
-
-
 @import url("https://fonts.googleapis.com/css2?family=Italiana&family=Antonio+Fischer&display=swap");
 
 body {
@@ -45,8 +14,55 @@ h3 {
 }
 @font-face {
 font-family: 'Antonio Fischer';
-src: url('font/Antonio\ Fischer.ttf') format('truetype'); /* Path to your font */
+src: url('font/Antonio\ Fischer.ttf') format('truetype'); 
 font-weight: normal;
 font-style: normal;
 }
 
+
+.sd-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 1rem 0;
+}    
+
+.bg-cover.bg-center.py-20 {
+    flex: 1;
+    height: calc(100vh - 145px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}    
+
+
+
+
+.bg-cover.bg-center.py-20:before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000e1bd6;
+}    
+
+
+
+
+.container{
+  max-width: 1440px;
+}
+
+
+.bg-shadow-bg:before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000e1bd6;
+}

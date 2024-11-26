@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery</title>
+    <title>Contact_us</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,6 +28,7 @@
             fontFamily: {
               sans: ['"Josefin Sans"', "sans-serif"],
               josefin: ['"Josefin Sans"', "sans-serif"],
+              antonio: ['"Antonio Fischer"', "cursive"],
             },
             backgroundImage: {
               "gradient-border":
@@ -39,7 +40,7 @@
     </script>
   </head>
 
-  <body class="bg-[#000D17] text-white font-Italiana">
+  <body class="bg-[#0D1B2A] text-white">
     <div class="absolute top-0 left-0 z-10">
       <img src="images/Smoke.png" alt="" class="w-full" />
     </div>
@@ -67,46 +68,99 @@
       </div>
     </div>
 
-    <header id="header" class="bg-none relative font-josefin left-0 md:relative shadow-lg top-0 w-full z-50 transition-colors duration-300">
-      <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <header
+      id="header"
+      class="bg-none relative font-josefin left-0 md:relative shadow-lg top-0 w-full z-50 transition-colors duration-300"
+    >
+      <div
+        class="container mx-auto px-4 py-4 flex items-center justify-between"
+      >
         <div class="logo flex items-center">
-          <img src="images/logo.png" alt="Logo" class="w-10 h-10 mr-2 md:w-[100px] md:h-[100px]">
+          <img
+            src="images/logo.png"
+            alt="Logo"
+            class="w-10 h-10 mr-2 md:w-[100px] md:h-[100px]"
+          />
         </div>
-  
+
         <!-- Hamburger Menu -->
-        <button id="menu-toggle" class="text-white text-2xl focus:outline-none md:hidden">☰</button>
-  
+        <button
+          id="menu-toggle"
+          class="text-white text-2xl focus:outline-none md:hidden"
+        >
+          ☰
+        </button>
+
         <!-- Navigation Menu -->
-        <nav id="menu" class="hidden md:flex space-x-6 text-white text-sm ">
-          <a href="index.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Home</a>
-          <a href="about.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">About</a>
-          <a href="product.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Product</a>
-          <a href="gallery.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Gallery</a>
-          <a href="blog.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Blog</a>
-          <a href="contact_us.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Contact Us</a>
+        <nav
+          id="menu"
+          class="hidden md:flex space-x-6 text-white text-sm uppercase"
+        >
+          <a href="index.html" class="hover:font-bold md:text-2xl font-normal"
+            >Home</a
+          >
+          <a href="about.html" class="hover:font-bold md:text-2xl font-normal"
+            >About</a
+          >
+          <a href="product.html" class="hover:font-bold md:text-2xl font-normal"
+            >Product</a
+          >
+          <a href="gallery.html" class="hover:font-bold md:text-2xl font-normal"
+            >Gallery</a
+          >
+          <a href="blog.html" class="hover:font-bold md:text-2xl font-normal"
+            >Blog</a
+          >
+          <a
+            href="contact_us.html"
+            class="hover:font-bold md:text-2xl font-normal"
+            >Contact Us</a
+          >
         </nav>
-  
+
         <!-- Book A Table Button -->
-        <a href="book.html" class="hidden md:inline-block md:text-2xl font-normal bg-blue-500 text-white px-4 py-2 rounded-lg">Book A
-          Table</a>
+        <a
+          href="book.html"
+          class="hidden md:inline-block md:text-2xl font-normal bg-blue-500 text-white px-4 py-2 rounded-lg"
+          >Book A Table</a
+        >
       </div>
-  
+
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden absolute top-0 left-0 w-full bg-[#000D17] text-white px-4 py-6 space-y-4 hidden">
-        <a href="index.html" class="block  md:text-2xl 	hover:text-blue-400">Home</a>
-        <a href="about.html" class="block  md:text-2xl 	hover:text-blue-400">About</a>
-        <a href="product.html" class="block  md:text-2xl 	hover:text-blue-400">Product</a>
-        <a href="gallery.html" class="block  md:text-2xl	hover:text-blue-400">Gallery</a>
-        <a href="blog.html" class="block  md:text-2xl hover:text-blue-400">Blog</a>
-        <a href="contact_us.html" class="block  md:text-2xl hover:text-blue-400">Contact Us</a>
-        <a href="book.html" class="block  md:text-2xl	bg-blue-500 text-white px-4 py-2 rounded-lg">Book A Table</a>
+      <div
+        id="mobile-menu"
+        class="md:hidden absolute top-0 left-0 w-full bg-[#000D17] text-white px-4 py-6 space-y-4 hidden"
+      >
+        <a href="index.html" class="block md:text-2xl hover:text-blue-400"
+          >Home</a
+        >
+        <a href="about.html" class="block md:text-2xl hover:text-blue-400"
+          >About</a
+        >
+        <a href="product.html" class="block md:text-2xl hover:text-blue-400"
+          >Product</a
+        >
+        <a href="gallery.html" class="block md:text-2xl hover:text-blue-400"
+          >Gallery</a
+        >
+        <a href="blog.html" class="block md:text-2xl hover:text-blue-400"
+          >Blog</a
+        >
+        <a href="contact_us.html" class="block md:text-2xl hover:text-blue-400"
+          >Contact Us</a
+        >
+        <a
+          href="book.html"
+          class="block md:text-2xl bg-blue-500 text-white px-4 py-2 rounded-lg"
+          >Book A Table</a
+        >
       </div>
     </header>
 
     <!-- Hero Section -->
     <section
       class="relative md:h-[685px] h-[219px] bg-cover bg-center"
-      style="background-image: url('images/Rectangle\ 1.png')"
+      style="background-image: url('images/Rectangle\ 89.png')"
     >
       <div class="absolute inset-0 bg-[#00223F] bg-opacity-80"></div>
       <div
@@ -115,156 +169,147 @@
         <h1
           class="font-normal leading-tight mb-4 md:text-[125px] text-[28px] uppercase"
         >
-          Gallery
+          Contact
         </h1>
       </div>
     </section>
 
-    <section class="md:py-16 py-8 bg-[#000D17] font-Italiana text-white">
-      <!-- Gallery -->
-      <div class="container md:px-0 mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2">
-          <div class="relative group">
-            <img
-              src="./images/Rectangle 16.jpg"
-              alt="Caprese"
-              class="w-full h-full object-cover"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity"
+    <section class="bg-[#0A0E14] md:py-16 py-8">
+      <div class="container mx-auto px-4">
+        <h3 class="text-lg  md:text-2xl text-center font-medium uppercase mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">Reservation</h3>
+        <p class="text-3xl md:text-6xl text-white font-normal font-Italiana mb-6 text-center">
+          Write Us a Message
+        </p>
+        <form action="#" method="POST">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <input
+                type="text"
+                name="first_name"
+                placeholder="First Name"
+                class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                name="last_name"
+                placeholder="Last Name"
+                class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+              />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone Number"
+                class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+              />
+            </div>
+          </div>
+          <div class="mb-6">
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Message"
+              class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+            ></textarea>
+          </div>
+          <div class="text-center">
+            <button
+              type="submit"
+              class="bg-[#1D71B8] text-white px-8 py-3  text-[28px] font-josefin font-normal"
             >
-              <p class="text-xl text-white">Caprese</p>
-            </div>
+              Send a Message
+            </button>
           </div>
-          <div class="grid grid-cols-2 sm:grid-cols-2">
-            <div class="relative group">
-              <img
-                src="./images/Rectangle 21.jpg"
-                alt="Tacos"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <p class="text-xl text-white">Tacos</p>
-              </div>
-            </div>
-            <div class="relative group">
-              <img
-                src="./images/Rectangle 18.jpg"
-                alt="Pancakes"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <p class="text-xl text-white">Pancakes</p>
-              </div>
-            </div>
-            <div class="relative group">
-              <img
-                src="./images/Rectangle 19.jpg"
-                alt="Burger"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <p class="text-xl text-white">Burger</p>
-              </div>
-            </div>
-            <div class="relative group">
-              <img
-                src="./images/Rectangle 20.jpg"
-                alt="Dish"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <p class="text-xl text-white">Dish</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2">
-          <div class="relative group">
-            <img
-              src="./images/Rectangle 16.jpg"
-              alt="Caprese"
-              class="w-full h-full object-cover"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity"
-            >
-              <p class="text-xl text-white">Caprese</p>
-            </div>
-          </div>
-          <div class="grid grid-cols-2 sm:grid-cols-2">
-            <div class="relative group">
-              <img
-                src="./images/Rectangle 21.jpg"
-                alt="Tacos"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <p class="text-xl text-white">Tacos</p>
-              </div>
-            </div>
-            <div class="relative group">
-              <img
-                src="./images/Rectangle 18.jpg"
-                alt="Pancakes"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <p class="text-xl text-white">Pancakes</p>
-              </div>
-            </div>
-            <div class="relative group">
-              <img
-                src="./images/Rectangle 19.jpg"
-                alt="Burger"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <p class="text-xl text-white">Burger</p>
-              </div>
-            </div>
-            <div class="relative group">
-              <img
-                src="./images/Rectangle 20.jpg"
-                alt="Dish"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <p class="text-xl text-white">Dish</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center mt-8 font-Josefin">
-        <a
-          href="#"
-          class="bg-blue-500 px-8 py-3 rounded-lg text-white font-medium hover:bg-blue-600"
-        >
-          View All
-        </a>
+        </form>
       </div>
     </section>
+
+    <!-- RESERVATION  Section -->
+    <section
+      class="relative bg-cover bg-center text-white"
+      style="background-image: url('./images/Rectangle\ 15.png')"
+    >
+      <div class="bg-[#0A0E14] bg-opacity-80 md:py-16 py-8">
+        <div class="container mx-auto px-4 text-center md:text-left">
+          <!-- Section Title -->
+          <div class="mb-4">
+            <h3
+              class="text-lg md:text-2xl font-medium uppercase mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4"
+            >
+              Reservation
+            </h3>
+          </div>
+          <h2 class="text-2xl md:text-6xl font-normal font-Italiana mb-4">
+            This Evening Will Be Great!
+          </h2>
+          <p
+            class="text-sm md:text-2xl text-[#9E9E9E] font-Josefin mb-6 text-left"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <a
+            href="#"
+            class="text-lg md:text-[28px] font-josefin font-normal bg-[#1D71B8] text-white px-6 py-3 shadow-lg hover:bg-[#1D71B8]"
+          >
+            Book A Table
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#000D17] font-Italiana p-8 py-16 relative text-white">
+      <div class="bg-cover border-[#1D71B8] border-b-2 border-blue container mx-auto px-4 text-center">
+        <div class="mb-12">
+          <h3 class="flex  md:text-2xl font-bold	md:text-2xl font-bold justify-center items-center font-medium uppercase mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
+        FEATURES
+      </h3>
+          <h1 class="md:text-6xl text-2xl font-Italiana font-normal text-center">Contact Information</h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div class="flex flex-col items-center">
+            <div class="mb-4">
+              <img src="images/email.png" alt="Email Icon" class="w-10 h-10">
+            </div>
+            <h3 class="text-2xl md:text-3xl	font-normal font-Italiana">Write Us</h3>
+            <p class=" text-[#9E9E9E text-sm]md: text-2xl my-2 font-josefin font-light">moonstruckcoffee599@gmail.com</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="mb-4">
+              <img src="images/Frame.png" alt="Phone Icon" class="w-10 h-10">
+            </div>
+            <h3 class="text-2xl md:text-3xl	font-normal font-Italiana">Call Us</h3>
+            <p class="text-[#9E9E9E] text-sm md:text-2xl my-2 font-josefin font-light">+91 096647 21479</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="mb-4">
+              <img src="images/location.png" alt="Location Icon" class="w-10 h-10">
+            </div>
+            <h3 class="text-2xl md:text-3xl	font-normal font-Italiana">Visit Us</h3>
+            <p class="text-[#9E9E9E] text-sm md:text-2xl my-2 font-josefin font-light text-center">
+              SNS Atria Besides Happy Excelencia
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer
-      class="md:py-16 py-8 bg-[#000D17] text-white font-Italiana bg-cover bg-center"
+      class="md:md:py-16 py-8 py-8 bg-[#000D17] text-white font-Italiana bg-cover bg-center"
       style="background-image: url('images/Smoke.png')"
     >
       <div class="container mx-auto px-4 md:px-0 font-Italiana">
