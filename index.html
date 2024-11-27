@@ -10,6 +10,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
     rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Italiana&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -17,45 +22,44 @@
         extend: {
           container: {
             padding: {
-              DEFAULT: "1rem",
-              sm: "2rem",
-              lg: "4rem",
-              xl: "5rem",
-              "2xl": "6rem",
+              DEFAULT: '1rem',
+              sm: '2rem',
+              lg: '4rem',
+              xl: '5rem',
+              '2xl': '6rem',
             },
           },
           fontFamily: {
             sans: ['"Josefin Sans"', "sans-serif"],
             josefin: ['"Josefin Sans"', "sans-serif"],
             antonio: ['"Antonio Fischer"', "cursive"],
+            italiana: ['"Italiana"', 'serif'],
+
+
           },
           backgroundImage: {
             "gradient-border":
               "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #1D71B8 100%)",
           },
+
         },
       },
     };
   </script>
 </head>
 
-<body class="bg-[#0D1B2A] text-white">
+<body class="bg-[#000D17] text-white">
   <div class="absolute top-0 left-0 z-10">
-    <img src="images/Smoke.png" alt="" class="w-full" />
+    <img src="images/Smoke.png" alt="" class="w-full">
   </div>
 
   <!-- Header -->
-  <div class="bg-[#0A0E14] p-2 flex justify-between items-center text-white font-sans md:hidden block">
+  <div class="bg-[#000D17] p-2 flex justify-between items-center text-white font-sans md:hidden block">
     <!-- Time -->
     <div class="text-sm">9:41</div>
-
-    <!-- Icons -->
     <div class="flex space-x-3">
-      <!-- Signal Icon -->
       <div class="w-4 h-4 bg-white rounded-full"></div>
-      <!-- Wi-Fi Icon -->
       <div class="w-4 h-4 border-t-2 border-l-2 border-white rotate-45"></div>
-      <!-- Battery Icon -->
       <div class="flex items-center space-x-1">
         <div class="w-6 h-3 border-2 border-white relative">
           <div class="w-4 h-2 bg-white absolute top-0 left-0"></div>
@@ -66,10 +70,10 @@
   </div>
 
   <header id="header"
-    class="bg-none relative font-josefin left-0 md:relative shadow-lg top-0 w-full z-50 transition-colors duration-300">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    class="bg-none relative font-josefin left-0 md:relative shadow-lg top-0 w-full z-50 transition-colors duration-300 opacity-90">
+    <div class="container mx-auto px-4 py-6 flex items-center justify-between">
       <div class="logo flex items-center">
-        <img src="images/logo.png" alt="Logo" class="w-10 h-10 mr-2 md:w-[100px] md:h-[100px]" />
+        <img src="images/logo.png" alt="Logo" class="w-10 h-10 mr-2 md:w-[100px] md:h-[100px]">
       </div>
 
       <!-- Hamburger Menu -->
@@ -112,12 +116,11 @@
     <div class="relative flex flex-col-reverse md:flex-row">
       <!-- Sidebar Navigation -->
       <div
-        class="bg-[#000D17] flex flex-col items-center justify-between md:flex-row md:justify-center md:py-0 md:space-y-0 md:w-[140px] py-4 space-y-4 w-full">
+        class="bg-[#000D17] flex flex-col items-center justify-between md:flex-row md:justify-center md:mt-32 md:py-0 md:space-y-0 md:w-[149px] py-4 space-y-4 w-full">
         <div class="flex flex-row gap-8 items-center md:flex-col space-y-0">
-          <!-- Top Icon -->
 
           <img src="images/Group 7.svg"
-            class="w-[15px] h-[47px] -rotate-90 icon md:mb-2 md:mr-0 md:mt-4 md:rotate-0 mr-6" alt="" />
+            class="w-[15px] h-[47px] -rotate-90 icon md:mb-2 md:mr-0 md:mt-4 md:rotate-0 mr-6" alt="">
 
           <!-- Navigation Links -->
           <div
@@ -129,7 +132,7 @@
 
           <!-- Bottom Icon -->
           <img src="images/Group 8.svg"
-            class="w-[15px] h-[47px] -rotate-90 icon md:ml-0 md:ml-o md:mt-2 md:rotate-0 ml-8 mt-4" alt="" />
+            class="w-[15px] h-[47px] -rotate-90 icon md:ml-0 md:ml-o md:mt-2 md:rotate-0 ml-8 mt-4" alt="">
         </div>
       </div>
 
@@ -141,12 +144,9 @@
           <h1 class="font-normal leading-tight mb-4 md:text-[125px] text-[28px] uppercase">
             Moonstruck Coffee
           </h1>
-          <p class="font-Italiana font-normal mb-6 md:text-3xl md:text-2xl font-bold uppercase">
-            Recipes Every Week Updates
-          </p>
-          <button class="bg-blue-500 px-6 py-3 rounded-lg text-white font-semibold">
-            Explore Now
-          </button>
+          <p class="font-italiana font-normal mb-6 md:text-2xl md:text-3xl md:tracking-[8px] text-[#FAFAFA] uppercase">
+            RECIPES EVERY WEEK UPDATES </p>
+
         </div>
       </div>
     </div>
@@ -155,38 +155,32 @@
   <!-- About Section -->
   <section class="bg-[#000D17] md:py-16 py-8">
     <h2
-      class="md:hidden flex items-center md:justify-start text-2xl font-medium uppercase px-4 before:content-[''] before:inline-block before:w-[80px] md:before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
+      class="before:bg-[#1D71B8] before:content-[''] before:h-1 before:inline-block before:md:mr-4 before:mr-4 before:w-[80px] flex font-medium items-center md:before:w-[120px] md:hidden md:justify-start mr-2 px-4 text-2xl uppercase">
       About Us
     </h2>
-    <div
-      class="flex flex-col-reverse gap-8 items-center justify-between md:container md:flex-row md:space-y-0 mx-auto px-0 space-y-8">
-      <!-- Text Content -->
-      <div class="font-Italiana md:text-left md:w-1/2 px-4 text-left w-full">
-        <!-- Heading -->
+    <div class="container flex flex-col-reverse gap-8 items-center md:flex-row md:space-x-8 mx-auto px-4 space-y-8">
+      <div class="font-italiana md:text-left text-left">
         <h2
-          class="hidden md:flex items-center justify-center md:justify-start text-2xl font-medium uppercase mb-4 before:content-[''] before:inline-block before:w-[80px] md:before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
+          class="before:bg-[#1D71B8] before:content-[''] before:h-1 before:inline-block before:md:mr-4 mr-2  before:w-[80px] font-josefin font-medium hidden items-center justify-center mb-4 md:before:w-[120px] md:flex md:justify-start md:text-2xl text-lg uppercase">
           About Us
         </h2>
-        <!-- Title -->
-        <p class="text-2xl md:text-6xl font-Italiana mb-6">
-          We invite you to visit our Moonstruck Coffee.
+        <p class="text-2xl md:text-6xl font-italiana mb-6">
+          We Invite You to Visit Our Moonstruck Coffee
         </p>
-        <!-- Subtitle -->
-        <p class="md:text-2xl font-bold md:text-2xl font-bold font-light text-[#9E9E9E] font-josefin mb-6">
+        <p class="font-josefin font-light mb-6 md:text-2xl text-[#9E9E9E] text-sm">
           Repudiandae dignissimos fugiat sit nam. Tempore aspernatur quae
           repudiandae dolorem, beatae dolorum, praesentium itaque et quam
           quaerat.
         </p>
-        <!-- Button -->
         <a href="#"
-          class="bg-blue-500 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">
+          class="bg-[#1D71B8] text-white px-6 py-3 md:px-8 md:py-4 text-lg  md:text-[28px] font-normal font-josefin hover:bg-[#1D71B8] transition duration-300">
           Read More
         </a>
       </div>
 
       <!-- Image -->
-      <div class="md:w-1/2 px-4 w-full">
-        <img src="images/about-bg.png" alt="About Us" class="mx-auto rounded-lg shadow-lg" />
+      <div class="md:pl-6 w-full">
+        <img src="images/about-bg.png" alt="About Us" class="shadow-lg">
       </div>
     </div>
   </section>
@@ -201,7 +195,7 @@
           <button class="text-5xl md:text-6xl mb-4">
             <img src="images/playicon.svg" alt="Play Icon" class="w-16 h-16 mx-auto">
           </button>
-          <h2 class="md:text-4xl text-xl font-Italiana">
+          <h2 class="md:text-4xl text-xl font-italiana">
             Watch Moonstruck Coffee Cooking Videos
           </h2>
         </div>
@@ -209,17 +203,17 @@
     </div>
   </section>
   <!-- Features Section -->
-  <section class="md:py-16 py-8 bg-[#000D17] font-Italiana relative">
-    <div class="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-50"
-      style="background-image: url('images/Smoke.png')"></div>
-
+  <section class="md:py-16 py-8 bg-[#000D17] font-italiana relative">
+    
     <!-- Content -->
     <div class="relative container mx-auto px-4">
+      <div class="absolute inset-0 bg-no-repeat bg-center bg-cover "
+        style="background-image: url('images/Smoke-cards.png')"></div>
       <h3
-        class="flex md:text-2xl font-bold md:text-2xl font-bold justify-center items-center font-medium uppercase mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
+        class="before:bg-[#1D71B8] before:content-[''] before:h-1 before:inline-block before:md:mr-4 before:mr-4 before:w-[120px] flex font-josefin font-medium items-center mb-4 md:justify-center md:text-2xl mr-2 text-lg uppercase">
         FEATURES
       </h3>
-      <p class="font-Italiana font-normal mb-6 md:text-6xl md:text-center text-2xl text-left text-white">
+      <p class="font-italiana font-normal mb-6 md:text-6xl md:text-center text-2xl text-left text-white">
         Why People Choose Us?
       </p>
 
@@ -237,14 +231,12 @@
             ">
           <div class="box-content" style="position: absolute; z-index: 11; left: 0; right: 0">
             <div class="text-6xl mb-4 flex justify-center">
-              <img src="images/cook.svg" alt="Cook Icon" class="w-16 h-16" />
+              <img src="images/cook.svg" alt="Cook Icon" class="w-16 h-16">
             </div>
             <h3 class="text-2xl mmd:text-3xl font-normal mb-2 text-white">
               Product for Every Taste
             </h3>
-            <p class="text-sm md:text-base text-gray-300">
-              Carefully crafted for you.
-            </p>
+
           </div>
           <div class="box-decoration" style="
                 opacity: 18%;
@@ -273,14 +265,12 @@
             ">
           <div class="box-content" style="position: absolute; z-index: 11; left: 0; right: 0">
             <div class="text-6xl mb-4 flex justify-center">
-              <img src="images/Group.svg" alt="Qualw-[15px] h-[47px] ity Beans Icon" class="w-16 h-16" />
+              <img src="images/Group.svg" alt="Qualw-[15px] h-[47px] ity Beans Icon" class="w-16 h-16">
             </div>
             <h3 class="text-2xl mmd:text-3xl font-normal mb-2 text-white">
               Always Quality Beans
             </h3>
-            <p class="text-sm md:text-base text-gray-300">
-              Only the best coffee beans.
-            </p>
+
           </div>
           <div class="box-decoration" style="
                 opacity: 18%;
@@ -308,14 +298,12 @@
             ">
           <div class="box-content" style="position: absolute; z-index: 11; left: 0; right: 0">
             <div class="text-6xl mb-4 flex justify-center">
-              <img src="images/cooking.svg" alt="Baristas Icon" class="w-16 h-16" />
+              <img src="images/cooking.svg" alt="Baristas Icon" class="w-16 h-16">
             </div>
             <h3 class="text-2xl mmd:text-3xl font-normal mb-2 text-white">
               Experienced Baristas
             </h3>
-            <p class="text-sm md:text-base text-gray-300">
-              Expertly made coffee.
-            </p>
+
           </div>
           <div class="box-decoration" style="
                 opacity: 18%;
@@ -340,77 +328,77 @@
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
         <h3
-          class="flex md:text-2xl font-bold md:text-2xl font-bold justify-center items-center font-medium uppercase mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
+          class="before:bg-[#1D71B8] before:content-[''] before:h-1 before:inline-block before:md:mr-4 before:mr-4 before:w-[120px] flex font-josefin font-medium items-center mb-4 md:justify-center md:text-2xl mr-2 text-lg uppercase">
           Blog
         </h3>
-        <p class="font-Italiana font-normal mb-6 md:text-6xl md:text-center text-2xl text-left text-white">
+        <p class="font-italiana font-normal mb-6 md:text-6xl md:text-center text-2xl text-left text-white">
           Latest Publications
         </p>
       </div>
 
       <!-- Blog Posts -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-        <div class="flex bg-[#0A1A2E] p-6 rounded-lg items-center">
+        <div class="bg-[#0A1A2E] flex items-center md:p-6 p-2">
           <img src="images/Pancakes.png" alt="Pancakes in Chocolate"
-            class="w-[105px] md:w-[157px] object-cover rounded-md mr-4" />
+            class="md:w-[157px] md:mr-4 mr-2  object-cover rounded-md w-[105px]">
           <div>
-            <h4 class="font-normal mb-2 md:text-3xl text-[22px] text-white">
+            <h4 class="font-italiana font-normal md:mb-2  md:text-3xl text-[22px] text-white">
               Pancakes in Chocolate
             </h4>
-            <p class="font-josefin font-light mb-2 md:text-2xl font-bold text-gray-400 text-sm">
+            <p class="font-josefin font-light md:mb-6 md:text-2xl text-[#9E9E9E] text-sm">
               Repudiandae dignissimos fugiat sit nam. Tempore aspernatur quae
               repudiandae.
             </p>
             <a href="#" class="text-blue-400 font-semibold flex items-center hover:underline">
-              <img src="images/arrow.svg" alt="" />
+              <img src="images/arrow.svg" alt="">
             </a>
           </div>
         </div>
-        <div class="flex bg-[#0A1A2E] p-6 rounded-lg items-center">
+        <div class="bg-[#0A1A2E] flex items-center md:p-6 p-2 ">
           <img src="images/Breakfast.jpg" alt="Business Breakfast"
-            class="w-[105px] md:w-[157px] object-cover rounded-md mr-4" />
+            class="md:w-[157px] md:mr-4 mr-2  object-cover rounded-md w-[105px]">
           <div>
-            <h4 class="font-normal mb-2 md:text-3xl text-[22px] text-white">
+            <h4 class="font-italiana font-normal md:mb-2  md:text-3xl text-[22px] text-white">
               Business Breakfast
             </h4>
-            <p class="font-josefin font-light mb-2 md:text-2xl font-bold text-gray-400 text-sm">
+            <p class="font-josefin font-light md:mb-6 md:text-2xl text-[#9E9E9E] text-sm">
               Repudiandae dignissimos fugiat sit nam. Tempore aspernatur quae
               repudiandae.
             </p>
             <a href="#" class="text-blue-400 font-semibold flex items-center hover:underline">
-              <img src="images/arrow.svg" alt="" />
+              <img src="images/arrow.svg" alt="">
             </a>
           </div>
         </div>
-        <div class="flex bg-[#0A1A2E] p-6 rounded-lg items-center">
-          <img src="images/Tuna.jpg" alt="Tuna & Tomatoes"
-            class="w-[105px] md:w-[157px] object-cover rounded-md mr-4" />
+        <div class="bg-[#0A1A2E] flex items-center md:p-6 p-2">
+          <img src="images/Tuna.jpg" alt="Tuna &amp; Tomatoes"
+            class="md:w-[157px] md:mr-4 mr-2  object-cover rounded-md w-[105px]">
           <div>
-            <h4 class="font-normal mb-2 md:text-3xl text-[22px] text-white">
-              Tuna & Tomatoes
+            <h4 class="font-italiana font-normal md:mb-2  md:text-3xl text-[22px] text-white">
+              Tuna &amp; Tomatoes
             </h4>
-            <p class="font-josefin font-light mb-2 md:text-2xl font-bold text-gray-400 text-sm">
+            <p class="font-josefin font-light md:mb-6 md:text-2xl text-[#9E9E9E] text-sm">
               Repudiandae dignissimos fugiat sit nam. Tempore aspernatur quae
               repudiandae.
             </p>
-            <a href="#" class="text-blue-400 font-semibold flex items-center hover:underline">
-              <img src="images/arrow.svg" alt="" />
+            <a href="#" class="flex font-semibold hover:underline items-center">
+              <img src="images/arrow.svg" alt="">
             </a>
           </div>
         </div>
-        <div class="flex bg-[#0A1A2E] p-6 rounded-lg items-center">
+        <div class="bg-[#0A1A2E] flex items-center md:p-6 p-2 ">
           <img src="images/salmon.jpg" alt="Air Fryer Salmon"
-            class="w-[105px] md:w-[157px] object-cover rounded-md mr-4" />
+            class="md:w-[157px] md:mr-4 mr-2  object-cover rounded-md w-[105px]">
           <div>
-            <h4 class="font-normal mb-2 md:text-3xl text-[22px] text-white">
+            <h4 class="font-italiana font-normal md:mb-2 md:text-3xl text-[22px] text-white">
               Air Fryer Salmon
             </h4>
-            <p class="font-josefin font-light mb-2 md:text-2xl font-bold text-gray-400 text-sm">
+            <p class="font-josefin font-light md:mb-6 md:text-2xl text-[#9E9E9E] text-sm">
               Repudiandae dignissimos fugiat sit nam. Tempore aspernatur quae
               repudiandae.
             </p>
-            <a href="#" class="text-blue-400 font-semibold flex items-center hover:underline">
-              <img src="images/arrow.svg" alt="" />
+            <a href="#" class="text-[#1D71B8] font-semibold flex items-center hover:underline">
+              <img src="images/arrow.svg" alt="">
             </a>
           </div>
         </div>
@@ -418,7 +406,8 @@
 
       <!-- View All Button -->
       <div class="text-center mt-8 font-josefin">
-        <a href="#" class="text-2xl px-8 py-3 bg-blue-500 text-white font-normal rounded-lg hover:bg-blue-600">
+        <a href="#"
+          class="bg-[#1D71B8] text-white px-6 py-3 md:px-8 md:py-4 text-lg md:text-[28px] font-normal font-josefin hover:bg-[#1D71B8] transition duration-300">
           View All
         </a>
       </div>
@@ -433,33 +422,34 @@
         <div class="md:w-[589px] w-full">
           <div class="mb-12 text-center">
             <h3
-              class="flex items-center md:text-2xl font-bold uppercase font-medium mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
+              class="before:bg-[#1D71B8] before:content-[''] before:h-1 before:inline-block before:md:mr-4 mr-2 before:mr-4   before:w-[120px] flex font-josefin font-medium items-center mb-4 md:text-2xl text-lg uppercase">
               Reservation
             </h3>
           </div>
-          <p class="mb-4 text-6xl">Open Timing</p>
-          <p class="font-josefin font-light font-normal mb-6 text-left md:text-2xl font-bold words-wrap">
+          <p class=" font-italiana font-normal  mb-4 md:text-6xl text-2xl">Open Timing</p>
+          <p class="font-josefin font-normal mb-6 md:text-2xl text-left text-sm words-wrap">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
           </p>
-          <a href="#" class="bg-blue-500 px-8 py-3 text-white font-semibold rounded-lg hover:bg-blue-600 transition">
+          <a href="#"
+            class="bg-[#1D71B8] text-white px-6 py-3 md:px-8 md:py-4 text-lg md:text-[28px] font-normal font-josefin hover:bg-[#1D71B8] transition duration-300">
             Book A Table
           </a>
         </div>
 
-        <div class="flex flex-col justify-center md:h-[342px] md:w-[529px] p-6 rounded-lg w-full"
-          style="background: #000d17b5">
+        <div
+          class="flex flex-col justify-center md:h-[342px] md:w-[529px] p-6 rounded-lg w-full md:bg-[#000d17b5] bg-black">
           <div class="flex justify-center mb-4">
-            <img src="images/clock.svg" alt="" />
+            <img src="images/clock.svg" alt="">
           </div>
           <ul class="text-center space-y-4">
             <li>
-              <span class="font-normal text-center mb-4 font-Josefin md:text-[22px] text-lg">Sunday to Tuesday:</span>
-              <span class="block md:text-2xl font-bold text-base font-josefin font-bold text-[#1D71B8]">08:00 -
+              <span class="font-normal text-center mb-4 font-josefin md:text-[22px] text-lg">Sunday to Tuesday:</span>
+              <span class="block font-bold font-josefin md:text-2xl text-[#1D71B8] text-base">08:00 -
                 22:00</span>
             </li>
             <li>
-              <span class="font-normal text-center mb-4 font-Josefin md:text-[22px] text-lg">Friday to Saturday:</span>
+              <span class="font-normal text-center mb-4 font-josefin md:text-[22px] text-lg">Friday to Saturday:</span>
               <span class="block md:text-2xl font-bold text-base font-josefin font-bold text-[#1D71B8]">11:00 -
                 19:00</span>
             </li>
@@ -470,36 +460,36 @@
   </section>
 
   <!-- Gallery Section -->
-  <section class="md:py-16 py-8 bg-[#000D17] font-Italiana text-white">
+  <section class="md:py-16 py-8 bg-[#000D17] font-italiana text-white">
     <div class="container mx-auto mb-16 px-4">
       <div class="flex flex-wrap justify-between gap-8 font-josefin">
         <div class="text-center w-full sm:w-auto">
-          <p class="text-4xl sm:text-6xl font-normal font-Italiana">
-            200<span class="text-blue-500">+</span>
+          <p class="text-4xl sm:text-6xl font-normal font-italiana">
+            200<span class="text-[#1D71B8]">+</span>
           </p>
           <p class="md:text-2xl font-bold font-josefin font-semibold">
             Visitors Daily
           </p>
         </div>
         <div class="text-center w-full sm:w-auto">
-          <p class="text-4xl sm:text-6xl font-normal font-Italiana">
-            400<span class="text-blue-500">+</span>
+          <p class="text-4xl sm:text-6xl font-normal font-italiana">
+            400<span class="text-[#1D71B8]">+</span>
           </p>
           <p class="md:text-2xl font-bold font-josefin font-semibold">
             Deliveries Monthly
           </p>
         </div>
         <div class="text-center w-full sm:w-auto">
-          <p class="text-4xl sm:text-6xl font-normal font-Italiana">
-            100<span class="text-blue-500">%</span>
+          <p class="text-4xl sm:text-6xl font-normal font-italiana">
+            100<span class="text-[#1D71B8]">%</span>
           </p>
           <p class="md:text-2xl font-bold font-josefin font-semibold">
             Positive Feedback
           </p>
         </div>
         <div class="text-center w-full sm:w-auto">
-          <p class="text-4xl sm:text-6xl font-normal font-Italiana">
-            40<span class="text-blue-500">+</span>
+          <p class="text-4xl sm:text-6xl font-normal font-italiana">
+            40<span class="text-[#1D71B8]">+</span>
           </p>
           <p class="md:text-2xl font-bold font-josefin font-semibold">
             Awards and Honors
@@ -508,12 +498,12 @@
       </div>
     </div>
 
-    <div class="text-center mb-12">
+    <div class="container md:mb-12 mx-auto">
       <h3
-        class="flex justify-center items-center md:text-2xl font-bold uppercase font-medium mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
+        class="before:bg-[#1D71B8] before:content-[''] before:h-1 before:inline-block before:md:mr-4 before:mr-4 before:w-[120px] flex font-josefin font-medium items-center mb-4 md:justify-center md:text-2xl mr-2 text-lg uppercase">
         Gallery
       </h3>
-      <p class="text-2xl md:text-6xl font-Italiana font-normal mb-6">
+      <p class="font-italiana font-normal mb-6 md:text-6xl md:text-center text-2xl text-left text-white">
         Our Photo Gallery
       </p>
     </div>
@@ -522,7 +512,7 @@
     <div class="md:px-0 mx-auto px-4">
       <div class="gap-0 grid grid-cols-1 md:gap-4 md:grid-cols-2 sm:grid-cols-2">
         <div class="relative group">
-          <img src="./images/Rectangle 16.jpg" alt="Caprese" class="w-full h-full object-cover" />
+          <img src="./images/Rectangle 16.jpg" alt="Caprese" class="w-full h-full object-cover">
           <div
             class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
             <p class="text-xl text-white">Caprese</p>
@@ -530,28 +520,28 @@
         </div>
         <div class="gap-0 md:gap-4 grid grid-cols-2 md:gap-4 sm:grid-cols-2">
           <div class="relative group">
-            <img src="./images/Rectangle 21.jpg" alt="Tacos" class="w-full h-full object-cover" />
+            <img src="./images/Rectangle 21.jpg" alt="Tacos" class="w-full h-full object-cover">
             <div
               class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
               <p class="text-xl text-white">Tacos</p>
             </div>
           </div>
           <div class="relative group">
-            <img src="./images/Rectangle 18.jpg" alt="Pancakes" class="w-full h-full object-cover" />
+            <img src="./images/Rectangle 18.jpg" alt="Pancakes" class="w-full h-full object-cover">
             <div
               class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
               <p class="text-xl text-white">Pancakes</p>
             </div>
           </div>
           <div class="relative group">
-            <img src="./images/Rectangle 19.jpg" alt="Burger" class="w-full h-full object-cover" />
+            <img src="./images/Rectangle 19.jpg" alt="Burger" class="w-full h-full object-cover">
             <div
               class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
               <p class="text-xl text-white">Burger</p>
             </div>
           </div>
           <div class="relative group">
-            <img src="./images/Rectangle 20.jpg" alt="Dish" class="w-full h-full object-cover" />
+            <img src="./images/Rectangle 20.jpg" alt="Dish" class="w-full h-full object-cover">
             <div
               class="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
               <p class="text-xl text-white">Dish</p>
@@ -561,7 +551,7 @@
       </div>
     </div>
 
-    <div class="text-center mt-8 font-Josefin">
+    <div class="text-center mt-8 font-josefin">
       <a href="#"
         class=" text-lg md:text-[28px]	 font-josefin font-normal bg-[#1D71B8] text-white px-6 py-3  shadow-lg hover:bg-[#1D71B8] ">
         View All
@@ -570,39 +560,38 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section class="md:py-16 py-8 bg-[#000D17] text-white font-Italiana">
+  <section class="md:py-16 py-8 bg-[#000D17] text-white font-italiana">
     <div class="container mx-auto px-4">
       <h3
-        class="flex justify-center items-center md:text-2xl font-bold uppercase font-medium mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
+        class="before:bg-[#1D71B8] before:content-[''] before:h-1 before:inline-block before:md:mr-4 before:mr-4 before:w-[120px] flex font-josefin font-medium items-center mb-4 md:justify-center md:text-2xl mr-2 text-lg uppercase">
         Testimonials
       </h3>
-      <p class="font-Italiana font-normal mb-4 md:mb-10 lg:text-6xl text-2xl text-left md:text-center">
+      <p class="font-italiana font-normal mb-4 md:mb-10 lg:text-6xl text-2xl text-left md:text-center">
         What Our Customers Say
       </p>
 
       <div class="md:gap-20 gap-4 grid items-center md:grid-cols-2">
         <div class="relative">
           <div class="-top-6 absolute flex items-center mb-4 md:-right-9 md:top-[-20px] right-0">
-            <div class="bg-blue-600 flex w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] p-3 rounded-full text-white top-0">
-              <img src="images/Vector.svg" class="w-[49px] mx-auto" />
+            <div class="bg-[#1D71B8]  flex w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] p-3 rounded-full text-white top-0">
+              <img src="images/Vector.svg" class="w-[49px] mx-auto">
             </div>
           </div>
-          <img alt="A person sitting at a table by the window, smiling" class="shadow-lg"
-            src="images/Rectangle 11.png" />
+          <img alt="A person sitting at a table by the window, smiling" class="shadow-lg" src="images/Rectangle 11.png">
         </div>
 
         <div class="max-w-2xl w-full">
-          <p class="font-josefin font-light xl:text-2xl mb-4 text-gray-400 text-left text-sm">
+          <p class="font-josefin font-light mb-6 md:text-2xl text-[#9E9E9E] text-sm">
             Reprehenderit dignissimos fugiat sit nam. Tempore aspernatur quae
             repudiandae dolorem, beatae dolorum, praesentium itaque et quam
             quaerat.
           </p>
-          <p class="font-josefin font-light text-sm xl:text-2xl mb-4 text-gray-400 text-left">
+          <p class="font-josefin font-light mb-6 md:text-2xl text-[#9E9E9E] text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley.
           </p>
-          <p class="font-semibold text-blue-400 text-left">
+          <p class="font-semibold text-[#1D71B8] text-left">
             Cameron Williamson
           </p>
           <div class="flex items-center mt-4">
@@ -619,31 +608,31 @@
   </section>
 
   <!-- Footer -->
-  <footer class="md:py-16 py-8 bg-[#000D17] text-white font-Italiana bg-cover bg-center"
+  <footer class="md:py-16 py-8 bg-[#000D17] text-white font-italiana bg-cover bg-center"
     style="background-image: url('images/Smoke.png')">
-    <div class="container mx-auto px-4 md:px-0 font-Italiana">
-      <div class="flex flex-col lg:flex-row justify-between items-center mb-6 space-y-6 lg:space-y-0">
+    <div class="container mx-auto px-4 md:px-0 font-italiana">
+      <div class="flex flex-col items-center justify-between lg:flex-row lg:space-y-0 mb-6 space-y-6">
         <div class="flex flex-col gap-4 items-center md:flex-row space-x-4">
-          <img alt="Moonstruck Coffee logo" class="h-[74px] md:h-[101px] md:w-[101px] w-[74px]" src="images/logo.png" />
-          <h1 class="md:text-6xl text-2xl font-Italiana font-normal text-center lg:text-left">
+          <img alt="Moonstruck Coffee logo" class="h-[74px] md:h-[101px] md:w-[101px] w-[74px]" src="images/logo.png">
+          <h1 class="md:text-6xl text-2xl font-italiana font-normal text-center lg:text-left">
             MOONSTRUCK COFFEE
           </h1>
         </div>
         <!-- Social Media Icons -->
-        <div class="flex gap-2 items-center md:block hidden">
+        <div class="flex gap-2 hidden items-center md:flex mr-16">
           <h2 class="md:text-2xl font-bold">SOCIAL ICONS</h2>
           <div class="flex space-x-4 items-center">
             <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
               href="#">
-              <img src="./images/Frame.svg" alt="" />
+              <img src="./images/Frame.svg" alt="">
             </a>
             <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
               href="#">
-              <img src="./images/Frame2.svg" alt="" />
+              <img src="./images/Frame2.svg" alt="">
             </a>
             <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
               href="#">
-              <img src="./images/Frame3.svg" alt="" />
+              <img src="./images/Frame3.svg" alt="">
             </a>
           </div>
         </div>
@@ -654,25 +643,34 @@
         <!-- Left Section -->
         <div class="">
           <div class="flex flex-col gap-4 md:gap-8 md:flex-row md:mt-0 mt-4">
-            <h2 class="md:text-2xl font-bold text-[17px] font-josefin font-medium mb-2">
+            <h2 class="font-josefin font-medium items-center md:mb-4 md:text-2xl md:text-center text-lg uppercase">
               OUR PAGES
             </h2>
-            <nav class="flex flex-wrap font-josefin font-normal gap-6 md:text-2xl font-bold text-[#9E9E9E] text-base">
-              <a class="hover:text-blue-500 transition" href="#">Home</a>
-              <a class="hover:text-blue-500 transition" href="#">About</a>
-              <a class="hover:text-blue-500 transition" href="#">Product</a>
-              <a class="hover:text-blue-500 transition" href="#">Gallery</a>
-              <a class="hover:text-blue-500 transition" href="#">Blog</a>
-              <a class="hover:text-blue-500 transition" href="#">Contact Us</a>
+            <nav class="flex flex-wrap font-normal gap-4 md:gap-4 md:gap-6">
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="#">Home</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="#">About</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="#">Product</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="#">Gallery</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="#">Blog</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="#">Contact Us</a>
             </nav>
           </div>
           <div class="flex flex-col gap-4 md:gap-8 md:flex-row md:mt-0 mt-4">
-            <h2 class="md:text-2xl font-bold text-[17px] font-josefin font-medium mb-2">
+            <h2 class="font-bold font-josefin font-medium md:text-2xl text-[17px]">
               CONTACT US
             </h2>
-            <div class="font-josefin font-normal md:text-2xl font-bold text-[#9E9E9E]">
-              <p>+91 096647 21479 | moonstruckcoffee566@gmail.com</p>
-              <p class="text-balance">
+            <div class="font-josefin font-normal   md:text-2xl md:words-wrap text-[#9E9E9E] text-base transition">
+              <p
+                class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl md:words-wrap text-[#9E9E9E] text-sm transition">
+                +91 096647 21479 | moonstruckcoffee566@gmail.com</p>
+              <p
+                class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl md:words-wrap text-[#9E9E9E] text-sm transition">
                 SNS Atria Besides Happy Excelencia, opp. Jolly Party Plot,
                 Vesu, Surat, Gujarat 395007
               </p>
@@ -682,16 +680,15 @@
 
         <!-- Right Section -->
         <div>
-          <h2 class="md:text-2xl  font-bold mb-2">LATEST POSTS</h2>
+          <h2 class="font-josefin font-medium items-center md:mb-4 md:text-2xl  text-lg uppercase">LATEST POSTS</h2>
           <div class="grid grid-cols-3 md:grid-cols-3 gap-4">
             <img alt="Image of a coffee cup and a croissant" class="w-full h-24 object-cover rounded-md"
-              src="./images/footericon.png" />
+              src="./images/footericon.png">
 
             <img alt="Image of a dish with vegetables" class="w-full h-24 object-cover rounded-md"
-              src="images/footericon2.png" />
+              src="images/footericon2.png">
 
-            <img alt="Image of a coffee cup" class="w-full h-24 object-cover rounded-md"
-              src="./images/footericon3.png" />
+            <img alt="Image of a coffee cup" class="w-full h-24 object-cover rounded-md" src="./images/footericon3.png">
           </div>
         </div>
 
@@ -701,44 +698,54 @@
           <div class="flex space-x-4 items-center">
             <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
               href="#">
-              <img src="./images/Frame.svg" alt="" />
+              <img src="./images/Frame.svg" alt="">
             </a>
             <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
               href="#">
-              <img src="./images/Frame2.svg" alt="" />
+              <img src="./images/Frame2.svg" alt="">
             </a>
             <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
               href="#">
-              <img src="./images/Frame3.svg" alt="" />
+              <img src="./images/Frame3.svg" alt="">
             </a>
           </div>
         </div>
       </div>
     </div>
   </footer>
-</body>
-<script>
-  document
-    .getElementById("menu-toggle")
-    .addEventListener("click", function () {
-      const mobileMenu = document.getElementById("mobile-menu");
-      mobileMenu.classList.toggle("hidden");
-    });
 
-  const mobileLinks = document.querySelectorAll("#mobile-menu a");
-  mobileLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      document.getElementById("mobile-menu").classList.add("hidden");
+  <script>
+    document
+      .getElementById("menu-toggle")
+      .addEventListener("click", function () {
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.classList.toggle("hidden");
+      });
+
+    const mobileLinks = document.querySelectorAll("#mobile-menu a");
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.add("hidden");
+      });
     });
-  });
-  document.addEventListener("scroll", () => {
-    const header = document.getElementById("header");
-    if (window.scrollY > 100) {
-      header.classList.add("bg-[#000d17]", "opacity-90");
-    } else {
-      header.classList.remove("bg-[#000d17]", "opacity-50");
-    }
-  });
-</script>
+    document.addEventListener("scroll", () => {
+      const header = document.getElementById("header");
+      if (window.scrollY > 100) {
+        header.classList.add("bg-[#000d17]", "opacity-90");
+      } else {
+        header.classList.remove("bg-[#000d17]", "opacity-50");
+      }
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+</body>
 
 </html>

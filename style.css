@@ -1,7 +1,6 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Italiana&family=Antonio+Fischer&display=swap");
 
-body {
+/* body {
   font-family: "Italiana", serif;
 }
 
@@ -11,7 +10,7 @@ h2{
 }
 h3 {
   font-family: "Josefin Sans", cursive;
-}
+} */
 @font-face {
 font-family: 'Antonio Fischer';
 src: url('font/Antonio\ Fischer.ttf') format('truetype'); 
