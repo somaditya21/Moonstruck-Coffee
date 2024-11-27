@@ -1,375 +1,629 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moonstruck Coffee</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-    rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          container: {
-            padding: {
-              DEFAULT: '1rem',
-              sm: '2rem',
-              lg: '4rem',
-              xl: '5rem',
-              '2xl': '6rem',
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moonstruck Coffee</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              padding: {
+                DEFAULT: "1rem",
+                sm: "2rem",
+                lg: "4rem",
+                xl: "5rem",
+                "2xl": "6rem",
+              },
+            },
+            fontFamily: {
+              sans: ['"Josefin Sans"', "sans-serif"],
+              josefin: ['"Josefin Sans"', "sans-serif"],
+              antonio: ['"Antonio Fischer"', "cursive"],
+            },
+            backgroundImage: {
+              "gradient-border":
+                "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #1D71B8 100%)",
             },
           },
-          fontFamily: {
-            sans: ['"Josefin Sans"', "sans-serif"],
-            josefin: ['"Josefin Sans"', "sans-serif"],
-            antonio: ['"Antonio Fischer"', "cursive"],
-          },
-          backgroundImage: {
-            "gradient-border":
-              "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #1D71B8 100%)",
-          },
-
         },
-      },
-    };
-  </script>
+      };
+    </script>
+  </head>
 
-</head>
-
-<body class="bg-[#000D17] text-white font-Italiana">
-
-  <div class="absolute top-0 left-0 z-10">
-    <img src="images/Smoke.png" alt="" class="w-full" />
-  </div>
-  
-  <!-- Header -->
-  <div class="bg-[#0A0E14] p-2 flex justify-between items-center text-white font-sans  md:hidden block">
-    <!-- Time -->
-    <div class="text-sm">9:41</div>
-  
-    <!-- Icons -->
-    <div class="flex space-x-3">
-      <!-- Signal Icon -->
-      <div class="w-4 h-4 bg-white rounded-full"></div>
-      <!-- Wi-Fi Icon -->
-      <div class="w-4 h-4 border-t-2 border-l-2 border-white rotate-45"></div>
-      <!-- Battery Icon -->
-      <div class="flex items-center space-x-1">
-        <div class="w-6 h-3 border-2 border-white relative">
-          <div class="w-4 h-2 bg-white absolute top-0 left-0"></div>
-        </div>
-        <div class="w-1 h-2 bg-white"></div>
-      </div>
-    </div>
-  </div>
-  
-  <header id="header" class="bg-none relative font-josefin left-0 md:relative shadow-lg top-0 w-full z-50 transition-colors duration-300">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="logo flex items-center">
-        <img src="images/logo.png" alt="Logo" class="w-10 h-10 mr-2 md:w-[100px] md:h-[100px]">
-      </div>
-
-      <!-- Hamburger Menu -->
-      <button id="menu-toggle" class="text-white text-2xl focus:outline-none md:hidden">☰</button>
-
-      <!-- Navigation Menu -->
-      <nav id="menu" class="hidden md:flex space-x-6 text-white text-sm ">
-        <a href="index.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Home</a>
-        <a href="about.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">About</a>
-        <a href="product.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Product</a>
-        <a href="gallery.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Gallery</a>
-        <a href="blog.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Blog</a>
-        <a href="contact_us.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Contact Us</a>
-      </nav>
-
-      <!-- Book A Table Button -->
-      <a href="book.html" class="hidden md:inline-block md:text-2xl font-normal bg-blue-500 text-white px-4 py-2 rounded-lg">Book A
-        Table</a>
+  <body class="bg-[#000D17] text-white font-Italiana">
+    <div class="absolute top-0 left-0 z-10">
+      <img src="images/Smoke.png" alt="" class="w-full" />
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden absolute top-0 left-0 w-full bg-[#000D17] text-white px-4 py-6 space-y-4 hidden">
-      <a href="index.html" class="block  md:text-2xl 	hover:text-blue-400">Home</a>
-      <a href="about.html" class="block  md:text-2xl 	hover:text-blue-400">About</a>
-      <a href="product.html" class="block  md:text-2xl 	hover:text-blue-400">Product</a>
-      <a href="gallery.html" class="block  md:text-2xl	hover:text-blue-400">Gallery</a>
-      <a href="blog.html" class="block  md:text-2xl hover:text-blue-400">Blog</a>
-      <a href="contact_us.html" class="block  md:text-2xl hover:text-blue-400">Contact Us</a>
-      <a href="book.html" class="block  md:text-2xl	bg-blue-500 text-white px-4 py-2 rounded-lg">Book A Table</a>
-    </div>
-  </header>
+    <!-- Header -->
+    <div
+      class="bg-[#0A0E14] p-2 flex justify-between items-center text-white font-sans md:hidden block"
+    >
+      <!-- Time -->
+      <div class="text-sm">9:41</div>
 
-  <!-- Hero Section -->
-  <section class="relative md:h-[685px] h-[219px] bg-cover bg-center " style="background-image: url('images/Group 10.jpg');">
-    <div class="absolute inset-0 bg-black bg-opacity-80"></div>
-    <div class="container flex md:h-[553px] h-[219px] items-center justify-center mx-auto px-4 relative z-10">
-      <h1 class="font-normal leading-tight mb-4 md:text-[125px] text-[28px] uppercase">About Us</h1>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="md:py-16  py-8 bg-[#000D17] text-white font-Italiana">
-    <div class="container mx-auto px-4">
-      <h3
-      class="text-lg  md:text-2xl font-medium uppercase mb-4 before:content-[''] md:hidden before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
-        Who We Are
-      </h3>
-
-      <!-- Content Section -->
-      <div class="flex flex-wrap items-center gap-8">
-        <div class="h-[264px] image-box md:h-[590px] md:w-full w-[345px] w-full" style="background-image: url(images/about-bg.png);/* height: 590px; */background-size: cover;">
-          <img src="images/about-bg.png" alt="Chef Cooking in a Kitchen" class="rounded-lg shadow-lg w-full object-cover h-auto" style="
-    display: none;
-">
-        </div>
-
-        <div class="w-fulltext-center md:text-left">
-          <h3 class="flex text-lg md:text-2xl hidden md:block items-center font-medium uppercase mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
-            Who We Are
-          </h3>
-          <h2 class="text-2xl md:text-6xl font-normal font-Italiana mb-4">
-            We Invite You to Visit Our Moonstruck Coffee
-          </h2>
-          <p class="text-sm md:text-2xl text-[#9E9E9E] font-Josefin mb-6">
-            Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.
-          </p>
-          <p class="text-sm md:text-2xl text-[#9E9E9E] font-Josefin mb-6">
-            It has survived not only five centuries but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets containing
-            Lorem Ipsum passages.
-          </p>
+      <!-- Icons -->
+      <div class="flex space-x-3">
+        <!-- Signal Icon -->
+        <div class="w-4 h-4 bg-white rounded-full"></div>
+        <!-- Wi-Fi Icon -->
+        <div class="w-4 h-4 border-t-2 border-l-2 border-white rotate-45"></div>
+        <!-- Battery Icon -->
+        <div class="flex items-center space-x-1">
+          <div class="w-6 h-3 border-2 border-white relative">
+            <div class="w-4 h-2 bg-white absolute top-0 left-0"></div>
+          </div>
+          <div class="w-1 h-2 bg-white"></div>
         </div>
       </div>
     </div>
-  </section>
 
-
-  <!-- Video Section -->
-  <section class="bg-[#000D17] md:py-16 py-8">
-    <div class="container mx-auto px-4">
-      <div class="md:h-[507px] h-[195px] relative">
-        <div class="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-50 bg-fixed"
-          style="background-image: url('images/video-bg.png');"></div>
-        <div class="mx-auto px-4 relative text-center top-10 md:top-[40%]">
-          <button class="text-5xl md:text-6xl mb-4">
-            <img src="images/playicon.svg" alt="Play Icon" class="w-16 h-16 mx-auto">
-          </button>
-          <h2 class="md:text-4xl text-xl	 font-Italiana">Watch Moonstruck Coffee Cooking Videos</h2>
+    <header
+      id="header"
+      class="bg-none relative font-josefin left-0 md:relative shadow-lg top-0 w-full z-50 transition-colors duration-300"
+    >
+      <div
+        class="container mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <div class="logo flex items-center">
+          <img
+            src="images/logo.png"
+            alt="Logo"
+            class="w-10 h-10 mr-2 md:w-[100px] md:h-[100px]"
+          />
         </div>
 
+        <!-- Hamburger Menu -->
+        <button
+          id="menu-toggle"
+          class="text-white text-2xl focus:outline-none md:hidden"
+        >
+          ☰
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav id="menu" class="hidden md:flex space-x-6 text-white text-sm">
+          <a
+            href="index.html"
+            class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal"
+            >About</a
+          >
+          <a
+            href="product.html"
+            class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal"
+            >Product</a
+          >
+          <a
+            href="gallery.html"
+            class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal"
+            >Gallery</a
+          >
+          <a
+            href="blog.html"
+            class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal"
+            >Blog</a
+          >
+          <a
+            href="contact_us.html"
+            class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal"
+            >Contact Us</a
+          >
+        </nav>
+
+        <!-- Book A Table Button -->
+        <a
+          href="book.html"
+          class="hidden md:inline-block md:text-2xl font-normal bg-blue-500 text-white px-4 py-2"
+          >Book A Table</a
+        >
       </div>
-      <p class="text-sm md:text-2xl text-[#9E9E9E] font-Josefin mt-6">
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </p>
-    </div>
-  </section>
 
-  <!-- Features Section -->
-  <section class="md:py-16  py-8 bg-[#000D17]">
-    <div class="container mx-auto px-4 text-center">
-      <h3
-      class="text-lg  md:text-2xl font-medium uppercase mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">
-        Features
-      </h3>
-      <h2 class="text-2xl md:text-6xl font-normal font-Italiana mb-4">Why People Choose Us?</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="p-4 text-center border-b-4 border-l-4 border-r-4 border-[#1D71B8]">
-          <img src="images/cook.svg" alt="Cook Icon" class="w-16 h-16 mx-auto mb-4">
-          <h3 class="text-xl	 md:text-3xl mb-2 font-normal">Product for Every Taste</h3>
-        </div>
-        <div class="p-4 text-center border-b-4 border-l-4 border-r-4 border-[#1D71B8]">
-          <img src="images/Group.svg" alt="Beans Icon" class="w-16 h-16 mx-auto mb-4">
-          <h3 class="text-xl	 md:text-3xl mb-2 font-normal">Always Quality Beans</h3>
-        </div>
-        <div class="p-4 text-center border-b-4 border-l-4 border-r-4 border-[#1D71B8]">
-          <img src="images/cooking.svg" alt="Baristas Icon" class="w-16 h-16 mx-auto mb-4">
-          <h3 class="text-xl	 md:text-3xl mb-2 font-normal">Experienced Baristas</h3>
-        </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden absolute top-0 left-0 w-full bg-[#000D17] text-white px-4 py-6 space-y-4 hidden"
+      >
+        <a href="index.html" class="block md:text-2xl hover:text-blue-400"
+          >Home</a
+        >
+        <a href="about.html" class="block md:text-2xl hover:text-blue-400"
+          >About</a
+        >
+        <a href="product.html" class="block md:text-2xl hover:text-blue-400"
+          >Product</a
+        >
+        <a href="gallery.html" class="block md:text-2xl hover:text-blue-400"
+          >Gallery</a
+        >
+        <a href="blog.html" class="block md:text-2xl hover:text-blue-400"
+          >Blog</a
+        >
+        <a href="contact_us.html" class="block md:text-2xl hover:text-blue-400"
+          >Contact Us</a
+        >
+        <a
+          href="book.html"
+          class="block md:text-2xl bg-blue-500 text-white px-4 py-2 rounded-lg"
+          >Book A Table</a
+        >
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Reservation Section -->
-
-  <section class=" relative bg-cover bg-center text-white " style="background-image: url('./images/Rectangle\ 15.png');">
-    <div class="bg-[#000D17] bg-opacity-80 md:py-16 py-8 ">
-      <div class="container mx-auto px-4 text-center md:text-left">
-        <!-- Section Title -->
-        <div class="mb-4">
-          <h3 class="text-lg  md:text-2xl font-medium uppercase mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4">Reservation</h3>
-        </div>
-        <h2 class="text-2xl md:text-6xl font-normal font-Italiana mb-4">This Evening Will Be Great!</h2>
-        <p class="text-sm md:text-2xl text-[#9E9E9E] font-Josefin mb-6 text-left">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </p>
-        <a href="#" class=" text-lg md:text-[28px]	 font-josefin font-normal bg-[#1D71B8] text-white px-6 py-3  shadow-lg hover:bg-[#1D71B8] ">
-          Book A Table
-        </a>
+    <!-- Hero Section -->
+    <section
+      class="relative md:h-[685px] h-[219px] bg-cover bg-center"
+      style="background-image: url('images/Group 10.jpg')"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-80"></div>
+      <div
+        class="container flex md:h-[553px] h-[219px] items-center justify-center mx-auto px-4 relative z-10"
+      >
+        <h1
+          class="font-normal leading-tight mb-4 md:text-[125px] text-[28px] uppercase"
+        >
+          About Us
+        </h1>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Statistics Section -->
-  <section class="md:py-16  py-8 bg-[#000D17]">
-    <div class="container mx-auto mb-16 px-4">
-      <div class="flex flex-wrap justify-between gap-8 font-josefin">
-        <div class="text-center w-full sm:w-auto">
-          <p class="text-4xl sm:text-6xl font-normal font-Italiana">
-            200<span class="text-blue-500">+</span>
-          </p>
-          <p class="text-lg font-josefin font-semibold">Visitors Daily</p>
-        </div>
-        <div class="text-center w-full sm:w-auto">
-          <p class="text-4xl sm:text-6xl font-normal font-Italiana">
-            400<span class="text-blue-500">+</span>
-          </p>
-          <p class="text-lg font-josefin font-semibold">Deliveries Monthly</p>
-        </div>
-        <div class="text-center w-full sm:w-auto">
-          <p class="text-4xl sm:text-6xl font-normal font-Italiana">
-            100<span class="text-blue-500">%</span>
-          </p>
-          <p class="text-lg font-josefin font-semibold">Positive Feedback</p>
-        </div>
-        <div class="text-center w-full sm:w-auto">
-          <p class="text-4xl sm:text-6xl font-normal font-Italiana">
-            40<span class="text-blue-500">+</span>
-          </p>
-          <p class="text-lg font-josefin font-semibold">Awards and Honors</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section class="md:py-16 py-8 bg-[#000D17] text-white font-Italiana">
+      <div class="container mx-auto px-4">
+        <h3
+          class="text-lg md:text-2xl font-medium uppercase mb-4 before:content-[''] md:hidden before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4"
+        >
+          Who We Are
+        </h3>
 
-   <!-- Footer -->
-   <footer class="md:py-16 py-8 bg-[#000D17] text-white font-Italiana bg-cover bg-center"
-  style="background-image: url('images/Smoke.png')">
-  <div class="container mx-auto px-4 md:px-0 font-Italiana">
-    <div class="flex flex-col lg:flex-row justify-between items-center mb-6 space-y-6 lg:space-y-0">
-      <div class="flex flex-col gap-4 items-center md:flex-row space-x-4">
-        <img alt="Moonstruck Coffee logo" class="h-[74px] md:h-[101px] md:w-[101px] w-[74px]" src="images/logo.png">
-        <h1 class="md:text-6xl text-2xl font-Italiana  font-normal text-center lg:text-left">MOONSTRUCK COFFEE</h1>
-      </div>
-      <!-- Social Media Icons -->
-       <div class="flex gap-2 items-center md:block hidden">
-        <h2 class=" md:text-2xl font-bold	">SOCIAL ICONS </h2>
-         <div class="flex space-x-4 items-center ">
-           <a class="text-white text-xl hover:text-blue transition  rounded-full border-2 border-[#1D71B8] p-2" href="#">
-            <img src="./images/Frame.svg" alt="">
-           </a>
-           <a class="text-white text-xl hover:text-blue transition  rounded-full border-2 border-[#1D71B8] p-2" href="#">
-           <img src="./images/Frame2.svg" alt="">
-           </a>
-           <a class="text-white text-xl hover:text-blue transition  rounded-full border-2 border-[#1D71B8] p-2" href="#">
-             <img src="./images/Frame3.svg" alt="">
- 
-           </a>
-         </div>
+        <!-- Content Section -->
+        <div class="flex flex-wrap items-center gap-8">
+          <div
+            class="h-[264px] image-box md:h-[590px] md:w-full w-[345px] w-full"
+            style="
+              background-image: url(images/about-bg.png); /* height: 590px; */
+              background-size: cover;
+            "
+          >
+            <img
+              src="images/about-bg.png"
+              alt="Chef Cooking in a Kitchen"
+              class="rounded-lg shadow-lg w-full object-cover h-auto"
+              style="display: none"
+            />
+          </div>
 
-       </div>
-    </div>
-
-    <!-- Bottom Section -->
-    <div class="flex flex-col lg:flex-row justify-between lg:items-start space-y-12 lg:space-y-0">
-      <!-- Left Section -->
-      <div class="">
-        <div class="flex flex-col gap-4 md:gap-8  md:flex-row md:mt-0 mt-4">
-          <h2 class="md:text-2xl font-bold text-[17px]	font-josefin font-medium mb-2">OUR PAGES</h2>
-          <nav class="flex flex-wrap font-josefin font-normal gap-6 md:text-2xl font-bold text-[#9E9E9E] text-base">
-            <a class="hover:text-blue-500 transition  " href="#">Home</a>
-            <a class="hover:text-blue-500 transition" href="#">About</a>
-            <a class="hover:text-blue-500 transition" href="#">Product</a>
-            <a class="hover:text-blue-500 transition" href="#">Gallery</a>
-            <a class="hover:text-blue-500 transition" href="#">Blog</a>
-            <a class="hover:text-blue-500 transition" href="#">Contact Us</a>
-          </nav>
-        </div>
-        <div class="flex flex-col gap-4 md:gap-8  md:flex-row md:mt-0 mt-4">
-          <h2 class="md:text-2xl font-bold text-[17px]	font-josefin font-medium mb-2">CONTACT US</h2>
-          <div class="font-josefin font-normal md:text-2xl font-bold text-[#9E9E9E]">
-
-            <p>+91 096647 21479 | moonstruckcoffee566@gmail.com</p>
-            <p class="text-balance">SNS Atria Besides Happy Excelencia, opp. Jolly Party Plot, Vesu, Surat, Gujarat
-              395007</p>
+          <div class="w-fulltext-center md:text-left">
+            <h3
+              class="flex text-lg md:text-2xl hidden md:block items-center font-medium uppercase mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4"
+            >
+              Who We Are
+            </h3>
+            <h2 class="text-2xl md:text-6xl font-normal font-Italiana mb-4">
+              We Invite You to Visit Our Moonstruck Coffee
+            </h2>
+            <p class="text-sm md:text-2xl text-[#9E9E9E] font-Josefin mb-6">
+              Lorem ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+            <p class="text-sm md:text-2xl text-[#9E9E9E] font-Josefin mb-6">
+              It has survived not only five centuries but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages.
+            </p>
           </div>
         </div>
-        
       </div>
+    </section>
 
-      <!-- Right Section -->
-      <div>
-        <h2 class=" md:text-2xl font-bold	font-bold ">LATEST POSTS</h2>
-        <div class="grid grid-cols-3 md:grid-cols-3 gap-4">
-         <img alt="Image of a coffee cup and a croissant" class="w-full h-24 object-cover rounded-md"
-            src="./images/footericon.png">
-          
-         <img alt="Image of a dish with vegetables" class="w-full h-24 object-cover rounded-md"
-             src="images/footericon2.png">
-         
-          <img alt="Image of a coffee cup" class="w-full h-24 object-cover rounded-md"
-            src="./images/footericon3.png">
-          
+    <!-- Video Section -->
+    <section class="bg-[#000D17] md:py-16 py-8">
+      <div class="container mx-auto px-4">
+        <div class="md:h-[507px] h-[195px] relative">
+          <div
+            class="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-50 bg-fixed"
+            style="background-image: url('images/video-bg.png')"
+          ></div>
+          <div class="mx-auto px-4 relative text-center top-10 md:top-[40%]">
+            <button class="text-5xl md:text-6xl mb-4">
+              <img
+                src="images/playicon.svg"
+                alt="Play Icon"
+                class="w-16 h-16 mx-auto"
+              />
+            </button>
+            <h2 class="md:text-4xl text-xl font-Italiana">
+              Watch Moonstruck Coffee Cooking Videos
+            </h2>
+          </div>
+        </div>
+        <p class="text-sm md:text-2xl text-[#9E9E9E] font-Josefin mt-6">
+          It has survived not only five centuries, but also the leap into
+          electronic typesetting, remaining essentially unchanged. It was
+          popularised in the 1960s with the release of Letraset sheets
+          containing Lorem Ipsum passages, and more recently with desktop
+          publishing software like Aldus PageMaker including versions of Lorem
+          Ipsum.
+        </p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="md:py-16 py-8 bg-[#000D17] font-Italiana relative">
+      <!-- Smoke Background -->
+      <div class="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-50" style="background-image: url('images/Smoke.png')"></div>
+
+      <!-- Content -->
+      <div class="relative container mx-auto px-4">
+        <h3 class="before:bg-blue-500 before:content-[''] before:h-1 before:inline-block before:mr-4 before:w-[120px] font-bold font-medium items-center mb-4 md:text-2xl md:text-center text-lg uppercase">
+          FEATURES
+        </h3>
+        <p class="font-Italiana font-normal mb-6 md:text-6xl md:text-center text-2xl text-left text-white">
+          Why People Choose Us?
+        </p>
+
+        <!-- Features Section -->
+        <div class="flex flex-col gap-8 justify-center md:flex-row md:justify-between mt-24">
+          <!-- Feature 1 -->
+          <div class="p-4 relative sm:w-[30%] text-center w-full" style="
+              border-image-source: linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0) 0%,
+                #1d71b8 100%
+              );
+              border-image-slice: 1;
+              border-width: 1px;
+              height: 210px;
+            ">
+            <div class="box-content" style="position: absolute; z-index: 11; left: 0; right: 0">
+              <div class="text-6xl mb-4 flex justify-center">
+                <img src="images/cook.svg" alt="Cook Icon" class="w-16 h-16">
+              </div>
+              <h3 class="text-2xl mmd:text-3xl font-normal mb-2 text-white">
+                Product for Every Taste
+              </h3>
+              <p class="text-sm md:text-base text-gray-300">
+                Carefully crafted for you.
+              </p>
+            </div>
+            <div class="box-decoration" style="
+                opacity: 18%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100%;
+                background: linear-gradient(
+                  180deg,
+                  rgba(0, 13, 23, 0) 0%,
+                  #1d71b8 100%
+                );
+                height: 210px;
+              "></div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="p-4 relative sm:w-[30%] text-center w-full" style="
+              border-image-source: linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0) 0%,
+                #1d71b8 100%
+              );
+              border-image-slice: 1;
+              border-width: 1px;
+              height: 210px;
+            ">
+            <div class="box-content" style="position: absolute; z-index: 11; left: 0; right: 0">
+              <div class="text-6xl mb-4 flex justify-center">
+                <img src="images/Group.svg" alt="Qualw-[15px] h-[47px] ity Beans Icon" class="w-16 h-16">
+              </div>
+              <h3 class="text-2xl mmd:text-3xl font-normal mb-2 text-white">
+                Always Quality Beans
+              </h3>
+              <p class="text-sm md:text-base text-gray-300">
+                Only the best coffee beans.
+              </p>
+            </div>
+            <div class="box-decoration" style="
+                opacity: 18%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100%;
+                background: linear-gradient(
+                  180deg,
+                  rgba(0, 13, 23, 0) 0%,
+                  #1d71b8 100%
+                );
+                height: 210px;
+              "></div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="p-4 relative sm:w-[30%] text-center w-full" style="
+              border-image-source: linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0) 0%,
+                #1d71b8 100%
+              );
+              border-image-slice: 1;
+              border-width: 1px;
+              height: 210px;
+            ">
+            <div class="box-content" style="position: absolute; z-index: 11; left: 0; right: 0">
+              <div class="text-6xl mb-4 flex justify-center">
+                <img src="images/cooking.svg" alt="Baristas Icon" class="w-16 h-16">
+              </div>
+              <h3 class="text-2xl mmd:text-3xl font-normal mb-2 text-white">
+                Experienced Baristas
+              </h3>
+              <p class="text-sm md:text-base text-gray-300">
+                Expertly made coffee.
+              </p>
+            </div>
+            <div class="box-decoration" style="
+                opacity: 18%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100%;
+                background: linear-gradient(
+                  180deg,
+                  rgba(0, 13, 23, 0) 0%,
+                  #1d71b8 100%
+                );
+                height: 210px;
+              "></div>
+          </div>
         </div>
       </div>
+    </section>
 
-       <!-- Social Media Icons -->
-       <div class="flex flex-col gap-2 md:hidden">
-        <h2 class=" md:text-2xl font-bold	">SOCIAL ICONS </h2>
-         <div class="flex space-x-4 items-center ">
-           <a class="text-white text-xl hover:text-blue transition  rounded-full border-2 border-[#1D71B8] p-2" href="#">
-            <img src="./images/Frame.svg" alt="">
-           </a>
-           <a class="text-white text-xl hover:text-blue transition  rounded-full border-2 border-[#1D71B8] p-2" href="#">
-           <img src="./images/Frame2.svg" alt="">
-           </a>
-           <a class="text-white text-xl hover:text-blue transition  rounded-full border-2 border-[#1D71B8] p-2" href="#">
-             <img src="./images/Frame3.svg" alt="">
- 
-           </a>
-         </div>
+    <!-- Reservation Section -->
 
-       </div>
-    </div>
-  </div>
-</footer>
+    <section
+      class="relative bg-cover bg-center text-white"
+      style="background-image: url('./images/Rectangle\ 15.png')"
+    >
+      <div class="bg-[#000D17] bg-opacity-80 md:py-16 py-8">
+        <div class="container mx-auto px-4 text-center md:text-left">
+          <!-- Section Title -->
+          <div class="mb-4">
+            <h3
+              class="text-lg md:text-2xl font-medium uppercase mb-4 before:content-[''] before:inline-block before:w-[120px] before:h-1 before:bg-blue-500 before:mr-4"
+            >
+              Reservation
+            </h3>
+          </div>
+          <h2 class="text-2xl md:text-6xl font-normal font-Italiana mb-4">
+            This Evening Will Be Great!
+          </h2>
+          <p
+            class="text-sm md:text-2xl text-[#9E9E9E] font-Josefin mb-6 text-left"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <a
+            href="#"
+            class="text-lg md:text-[28px] font-josefin font-normal bg-[#1D71B8] text-white px-6 py-3 shadow-lg hover:bg-[#1D71B8]"
+          >
+            Book A Table
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <!-- Statistics Section -->
+    <section class="md:py-16 py-8 bg-[#000D17]">
+      <div class="container mx-auto mb-16 px-4">
+        <div class="flex flex-wrap justify-between gap-8 font-josefin">
+          <div class="text-center w-full sm:w-auto">
+            <p class="text-4xl sm:text-6xl font-normal font-Italiana">
+              200<span class="text-blue-500">+</span>
+            </p>
+            <p class="text-lg font-josefin font-semibold">Visitors Daily</p>
+          </div>
+          <div class="text-center w-full sm:w-auto">
+            <p class="text-4xl sm:text-6xl font-normal font-Italiana">
+              400<span class="text-blue-500">+</span>
+            </p>
+            <p class="text-lg font-josefin font-semibold">Deliveries Monthly</p>
+          </div>
+          <div class="text-center w-full sm:w-auto">
+            <p class="text-4xl sm:text-6xl font-normal font-Italiana">
+              100<span class="text-blue-500">%</span>
+            </p>
+            <p class="text-lg font-josefin font-semibold">Positive Feedback</p>
+          </div>
+          <div class="text-center w-full sm:w-auto">
+            <p class="text-4xl sm:text-6xl font-normal font-Italiana">
+              40<span class="text-blue-500">+</span>
+            </p>
+            <p class="text-lg font-josefin font-semibold">Awards and Honors</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Footer -->
+    <footer
+      class="md:py-16 py-8 bg-[#000D17] text-white font-Italiana bg-cover bg-center"
+      style="background-image: url('images/Smoke.png')"
+    >
+      <div class="container mx-auto px-4 md:px-0 font-Italiana">
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center mb-6 space-y-6 lg:space-y-0"
+        >
+          <div class="flex flex-col gap-4 items-center md:flex-row space-x-4">
+            <img
+              alt="Moonstruck Coffee logo"
+              class="h-[74px] md:h-[101px] md:w-[101px] w-[74px]"
+              src="images/logo.png"
+            />
+            <h1
+              class="md:text-6xl text-2xl font-Italiana font-normal text-center lg:text-left"
+            >
+              MOONSTRUCK COFFEE
+            </h1>
+          </div>
+          <!-- Social Media Icons -->
+          <div class="flex gap-2 items-center md:block hidden">
+            <h2 class="md:text-2xl font-bold">SOCIAL ICONS</h2>
+            <div class="flex space-x-4 items-center">
+              <a
+                class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+                href="#"
+              >
+                <img src="./images/Frame.svg" alt="" />
+              </a>
+              <a
+                class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+                href="#"
+              >
+                <img src="./images/Frame2.svg" alt="" />
+              </a>
+              <a
+                class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+                href="#"
+              >
+                <img src="./images/Frame3.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
 
-</body>
-<script>
- document
-   .getElementById("menu-toggle")
-   .addEventListener("click", function () {
-     const mobileMenu = document.getElementById("mobile-menu");
-     mobileMenu.classList.toggle("hidden");
-   });
+        <!-- Bottom Section -->
+        <div
+          class="flex flex-col lg:flex-row justify-between lg:items-start space-y-12 lg:space-y-0"
+        >
+          <!-- Left Section -->
+          <div class="">
+            <div class="flex flex-col gap-4 md:gap-8 md:flex-row md:mt-0 mt-4">
+              <h2
+                class="md:text-2xl font-bold text-[17px] font-josefin font-medium mb-2"
+              >
+                OUR PAGES
+              </h2>
+              <nav
+                class="flex flex-wrap font-josefin font-normal gap-6 md:text-2xl font-bold text-[#9E9E9E] text-base"
+              >
+                <a class="hover:text-blue-500 transition" href="#">Home</a>
+                <a class="hover:text-blue-500 transition" href="#">About</a>
+                <a class="hover:text-blue-500 transition" href="#">Product</a>
+                <a class="hover:text-blue-500 transition" href="#">Gallery</a>
+                <a class="hover:text-blue-500 transition" href="#">Blog</a>
+                <a class="hover:text-blue-500 transition" href="#"
+                  >Contact Us</a
+                >
+              </nav>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-8 md:flex-row md:mt-0 mt-4">
+              <h2
+                class="md:text-2xl font-bold text-[17px] font-josefin font-medium mb-2"
+              >
+                CONTACT US
+              </h2>
+              <div
+                class="font-josefin font-normal md:text-2xl font-bold text-[#9E9E9E]"
+              >
+                <p>+91 096647 21479 | moonstruckcoffee566@gmail.com</p>
+                <p class="text-balance">
+                  SNS Atria Besides Happy Excelencia, opp. Jolly Party Plot,
+                  Vesu, Surat, Gujarat 395007
+                </p>
+              </div>
+            </div>
+          </div>
 
- const mobileLinks = document.querySelectorAll("#mobile-menu a");
- mobileLinks.forEach((link) => {
-   link.addEventListener("click", () => {
-     document.getElementById("mobile-menu").classList.add("hidden");
-   });
- });
- document.addEventListener("scroll", () => {
-   const header = document.getElementById("header");
-   if (window.scrollY > 100) {
-     header.classList.add("bg-[#000d17]", "opacity-90");
-   } else {
-     header.classList.remove("bg-[#000d17]", "opacity-50");
-   }
- });
-</script>
+          <!-- Right Section -->
+         <div>
+            <h2 class="md:text-2xl font-bold font-bold mb-2">LATEST POSTS</h2>
+            <div class="grid grid-cols-3 md:grid-cols-3 gap-4">
+              <img
+                alt="Image of a coffee cup and a croissant"
+                class="w-full h-24 object-cover rounded-md"
+                src="./images/footericon.png"
+              />
 
+              <img
+                alt="Image of a dish with vegetables"
+                class="w-full h-24 object-cover rounded-md"
+                src="images/footericon2.png"
+              />
 
+              <img
+                alt="Image of a coffee cup"
+                class="w-full h-24 object-cover rounded-md"
+                src="./images/footericon3.png"
+              />
+            </div>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="flex flex-col gap-2 md:hidden">
+            <h2 class="md:text-2xl font-bold">SOCIAL ICONS</h2>
+            <div class="flex space-x-4 items-center">
+              <a
+                class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+                href="#"
+              >
+                <img src="./images/Frame.svg" alt="" />
+              </a>
+              <a
+                class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+                href="#"
+              >
+                <img src="./images/Frame2.svg" alt="" />
+              </a>
+              <a
+                class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+                href="#"
+              >
+                <img src="./images/Frame3.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    document
+      .getElementById("menu-toggle")
+      .addEventListener("click", function () {
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.classList.toggle("hidden");
+      });
+
+    const mobileLinks = document.querySelectorAll("#mobile-menu a");
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.add("hidden");
+      });
+    });
+    document.addEventListener("scroll", () => {
+      const header = document.getElementById("header");
+      if (window.scrollY > 100) {
+        header.classList.add("bg-[#000d17]", "opacity-90");
+      } else {
+        header.classList.remove("bg-[#000d17]", "opacity-50");
+      }
+    });
+  </script>
 </html>

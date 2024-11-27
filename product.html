@@ -1,616 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            container: {
-              padding: {
-                DEFAULT: "1rem",
-                sm: "2rem",
-                lg: "4rem",
-                xl: "5rem",
-                "2xl": "6rem",
-              },
-            },
-            fontFamily: {
-              sans: ['"Josefin Sans"', "sans-serif"],
-              josefin: ['"Josefin Sans"', "sans-serif"],
-            },
-            backgroundImage: {
-              "gradient-border":
-                "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #1D71B8 100%)",
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          container: {
+            padding: {
+              DEFAULT: "1rem",
+              sm: "2rem",
+              lg: "4rem",
+              xl: "5rem",
+              "2xl": "6rem",
             },
           },
+          fontFamily: {
+            sans: ['"Josefin Sans"', "sans-serif"],
+            josefin: ['"Josefin Sans"', "sans-serif"],
+          },
+          backgroundImage: {
+            "gradient-border":
+              "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #1D71B8 100%)",
+          },
         },
-      };
-    </script>
-  </head>
+      },
+    };
+  </script>
+</head>
 
-  <body class="bg-[#000D17] text-white font-Italiana">
-    <div class="absolute top-0 left-0 z-10">
+<body class="bg-[#000D17] text-white font-Italiana">
+  <div class="absolute top-0 left-0 z-10">
+    <img src="images/Smoke.png" alt="" class="w-full" />
+  </div>
+
+  <!-- Header -->
+  <div class="bg-[#0A0E14] p-2 flex justify-between items-center text-white font-sans md:hidden block">
+    <!-- Time -->
+    <div class="text-sm">9:41</div>
+
+    <!-- Icons -->
+    <div class="flex space-x-3">
+      <!-- Signal Icon -->
+      <div class="w-4 h-4 bg-white rounded-full"></div>
+      <!-- Wi-Fi Icon -->
+      <div class="w-4 h-4 border-t-2 border-l-2 border-white rotate-45"></div>
+      <!-- Battery Icon -->
+      <div class="flex items-center space-x-1">
+        <div class="w-6 h-3 border-2 border-white relative">
+          <div class="w-4 h-2 bg-white absolute top-0 left-0"></div>
+        </div>
+        <div class="w-1 h-2 bg-white"></div>
+      </div>
+    </div>
+  </div>
+
+  <header id="header"
+    class="bg-none relative font-josefin left-0 md:relative shadow-lg top-0 w-full z-50 transition-colors duration-300">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="logo flex items-center">
+        <img src="images/logo.png" alt="Logo" class="w-10 h-10 mr-2 md:w-[100px] md:h-[100px]" />
+      </div>
+
+      <!-- Hamburger Menu -->
+      <button id="menu-toggle" class="text-white text-2xl focus:outline-none md:hidden">
+        ☰
+      </button>
+
+      <!-- Navigation Menu -->
+      <nav id="menu" class="hidden md:flex space-x-6 text-white text-sm">
+        <a href="index.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Home</a>
+        <a href="about.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">About</a>
+        <a href="product.html"
+          class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Product</a>
+        <a href="gallery.html"
+          class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Gallery</a>
+        <a href="blog.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Blog</a>
+        <a href="contact_us.html"
+          class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Contact Us</a>
+      </nav>
+
+      <!-- Book A Table Button -->
+      <a href="book.html" class="hidden md:inline-block md:text-2xl font-normal bg-blue-500 text-white px-4 py-2 ">Book
+        A Table</a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="md:hidden absolute top-0 left-0 w-full bg-[#000D17] text-white px-4 py-6 space-y-4 hidden">
+      <a href="index.html" class="block md:text-2xl hover:text-blue-400">Home</a>
+      <a href="about.html" class="block md:text-2xl hover:text-blue-400">About</a>
+      <a href="product.html" class="block md:text-2xl hover:text-blue-400">Product</a>
+      <a href="gallery.html" class="block md:text-2xl hover:text-blue-400">Gallery</a>
+      <a href="blog.html" class="block md:text-2xl hover:text-blue-400">Blog</a>
+      <a href="contact_us.html" class="block md:text-2xl hover:text-blue-400">Contact Us</a>
+      <a href="book.html" class="block md:text-2xl bg-blue-500 text-white px-4 py-2 rounded-lg">Book A Table</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-center bg-cover h-[219px] md:h-[685px] opacity-80 relative"
+    style="background-image: url('images/Product-bg.png')">
+    <div class="absolute left-0 top-0 z-10">
       <img src="images/Smoke.png" alt="" class="w-full" />
     </div>
+    <div class="absolute inset-0 bg-[#00223F] bg-opacity-80"></div>
+    <div class="container flex md:h-[553px] h-[219px] items-center justify-center mx-auto px-4 relative z-10">
+      <h1 class="font-normal leading-tight mb-4 md:text-[125px] text-[28px] uppercase">
+        Product
+      </h1>
+    </div>
+  </section>
 
-    <!-- Header -->
-    <div
-      class="bg-[#0A0E14] p-2 flex justify-between items-center text-white font-sans md:hidden block"
-    >
-      <!-- Time -->
-      <div class="text-sm">9:41</div>
+  <!-- Services Section  -->
+  <section class="md:py-16 py-8 bg-[#000D17] text-white font-Italiana">
+    <div class="container gap-8 grid grid-cols-1 md:grid-cols-2 mx-auto px-4">
+      <!-- Left Column -->
+      <div class="grid grid-rows-2 gap-4">
+        <div>
+          <img src="images/Rectangle 83.jpg" alt="Pouring Coffee"
+            class="h-[264px] md:h-[370px] rounded-lg shadow-lg w-full">
+        </div>
+        <ul class="md:py-8 space-y-4">
+          <li class="flex justify-between items-center border-b border-gray-700 py-2">
+            <span class="text-[22px] md:text-2xl font-normal font-josefin">Lunch</span>
+            <span class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400">100%</span>
+          </li>
+          <li class="flex justify-between items-center border-b border-gray-700 py-2">
+            <span class="text-[22px] md:text-2xl font-normal font-josefin">Dinner</span>
+            <span class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400">100%</span>
+          </li>
+          <li class="flex justify-between items-center border-b border-gray-700 py-2">
+            <span class="text-[22px] md:text-2xl font-normal font-josefin">Breakfast</span>
+            <span class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400">100%</span>
+          </li>
+          <li class="flex justify-between items-center border-b border-gray-700 py-2">
+            <span class="text-[22px] md:text-2xl font-normal font-josefin">Snacks</span>
+            <span class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400">100%</span>
+          </li>
+        </ul>
+      </div>
 
-      <!-- Icons -->
-      <div class="flex space-x-3">
-        <!-- Signal Icon -->
-        <div class="w-4 h-4 bg-white rounded-full"></div>
-        <!-- Wi-Fi Icon -->
-        <div class="w-4 h-4 border-t-2 border-l-2 border-white rotate-45"></div>
-        <!-- Battery Icon -->
-        <div class="flex items-center space-x-1">
-          <div class="w-6 h-3 border-2 border-white relative">
-            <div class="w-4 h-2 bg-white absolute top-0 left-0"></div>
-          </div>
-          <div class="w-1 h-2 bg-white"></div>
+      <!-- Right Column -->
+      <div class="grid grid-rows-2 gap-4">
+        <ul class="md:my-8 space-y-4">
+          <li class="flex justify-between items-center border-b border-gray-700 py-2">
+            <span class="text-[22px] md:text-2xl font-normal font-josefin">Fast Service</span>
+            <span class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400">100%</span>
+          </li>
+          <li class="flex justify-between items-center border-b border-gray-700 py-2">
+            <span class="text-[22px] md:text-2xl font-normal font-josefin">Free Reservation</span>
+            <span class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400">100%</span>
+          </li>
+          <li class="flex justify-between items-center border-b border-gray-700 py-2">
+            <span class="text-[22px] md:text-2xl font-normal font-josefin">Free Delivery</span>
+            <span class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400">100%</span>
+          </li>
+          <li class="flex justify-between items-center border-b border-gray-700 py-2">
+            <span class="text-[22px] md:text-2xl font-normal font-josefin">Free Parking</span>
+            <span class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400">100%</span>
+          </li>
+        </ul>
+        <div>
+          <img src="images/Rectangle 84.jpg" alt="Coffee Cup"
+            class="h-[264px] md:h-[370px] rounded-lg shadow-lg w-full">
         </div>
       </div>
     </div>
+  </section>
 
-    <header
-      id="header"
-      class="bg-none relative font-josefin left-0 md:relative shadow-lg top-0 w-full z-50 transition-colors duration-300"
-    >
-      <div
-        class="container mx-auto px-4 py-4 flex items-center justify-between"
-      >
-        <div class="logo flex items-center">
-          <img
-            src="images/logo.png"
-            alt="Logo"
-            class="w-10 h-10 mr-2 md:w-[100px] md:h-[100px]"
-          />
-        </div>
-
-        <!-- Hamburger Menu -->
-        <button
-          id="menu-toggle"
-          class="text-white text-2xl focus:outline-none md:hidden"
-        >
-          ☰
-        </button>
-
-        <!-- Navigation Menu -->
-        <nav id="menu" class="hidden md:flex space-x-6 text-white text-sm">
-          <a
-            href="index.html"
-            class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal"
-            >Home</a
-          >
-          <a
-            href="about.html"
-            class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal"
-            >About</a
-          >
-          <a
-            href="product.html"
-            class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal"
-            >Product</a
-          >
-          <a
-            href="gallery.html"
-            class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal"
-            >Gallery</a
-          >
-          <a
-            href="blog.html"
-            class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal"
-            >Blog</a
-          >
-          <a
-            href="contact_us.html"
-            class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal"
-            >Contact Us</a
-          >
-        </nav>
-
-        <!-- Book A Table Button -->
-        <a
-          href="book.html"
-          class="hidden md:inline-block md:text-2xl font-normal bg-blue-500 text-white px-4 py-2 rounded-lg"
-          >Book A Table</a
-        >
-      </div>
-
-      <!-- Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="md:hidden absolute top-0 left-0 w-full bg-[#000D17] text-white px-4 py-6 space-y-4 hidden"
-      >
-        <a href="index.html" class="block md:text-2xl hover:text-blue-400"
-          >Home</a
-        >
-        <a href="about.html" class="block md:text-2xl hover:text-blue-400"
-          >About</a
-        >
-        <a href="product.html" class="block md:text-2xl hover:text-blue-400"
-          >Product</a
-        >
-        <a href="gallery.html" class="block md:text-2xl hover:text-blue-400"
-          >Gallery</a
-        >
-        <a href="blog.html" class="block md:text-2xl hover:text-blue-400"
-          >Blog</a
-        >
-        <a href="contact_us.html" class="block md:text-2xl hover:text-blue-400"
-          >Contact Us</a
-        >
-        <a
-          href="book.html"
-          class="block md:text-2xl bg-blue-500 text-white px-4 py-2 rounded-lg"
-          >Book A Table</a
-        >
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section
-      class="bg-center bg-cover h-[219px] md:h-[685px] opacity-80 relative"
-      style="background-image: url('images/Product-bg.png')"
-    >
-      <div class="absolute left-0 top-0 z-10">
-        <img src="images/Smoke.png" alt="" class="w-full" />
-      </div>
-      <div class="absolute inset-0 bg-[#00223F] bg-opacity-80"></div>
-      <div
-        class="container flex md:h-[553px] h-[219px] items-center justify-center mx-auto px-4 relative z-10"
-      >
-        <h1
-          class="font-normal leading-tight mb-4 md:text-[125px] text-[28px] uppercase"
-        >
-          Product
-        </h1>
-      </div>
-    </section>
-
-    <!-- Services Section  -->
-    <section class="py-16 bg-[#000D17] text-white font-Italiana">
-      <div class="container gap-8 grid grid-cols-1 md:grid-cols-2 mx-auto px-4">
-        <!-- Left Column -->
-        <div class="grid grid-rows-2 gap-4">
-          <div>
-            <img
-              src="images/Rectangle 83.jpg"
-              alt="Pouring Coffee"
-              class="rounded-lg shadow-lg w-full"
-            />
+  <!-- Product Card  -->
+  <section class="blog-card md:py-16 py-8">
+    <div class="container mx-auto">
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-[#0A1A2E] items-center rounded-lg">
+          <img src="images/Rectangle 82.png" alt="" />
+          <div class="flex items-center justify-between p-4">
+            <div class="">
+              <h3 class="font-normal mb-2 md:text-2xl text-[22px] font-Josefin text-[#1D71B8]">
+                Starter
+              </h3>
+              <p class="font-Italiana font-normal md:text-2xl text-white text-sm">
+                Quantity: 4
+              </p>
+            </div>
+            <a href="product2.html" class="text-blue-400 font-semibold flex items-center hover:underline">
+              <img src="images/arrow.svg" alt="" />
+            </a>
           </div>
-          <ul class="mt-10 space-y-4">
-            <li
-              class="flex justify-between items-center border-b border-gray-700 py-2"
-            >
-              <span class="text-[22px] md:text-2xl font-normal font-josefin"
-                >Lunch</span
-              >
-              <span
-                class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400"
-                >100%</span
-              >
-            </li>
-            <li
-              class="flex justify-between items-center border-b border-gray-700 py-2"
-            >
-              <span class="text-[22px] md:text-2xl font-normal font-josefin"
-                >Dinner</span
-              >
-              <span
-                class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400"
-                >100%</span
-              >
-            </li>
-            <li
-              class="flex justify-between items-center border-b border-gray-700 py-2"
-            >
-              <span class="text-[22px] md:text-2xl font-normal font-josefin"
-                >Breakfast</span
-              >
-              <span
-                class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400"
-                >100%</span
-              >
-            </li>
-            <li
-              class="flex justify-between items-center border-b border-gray-700 py-2"
-            >
-              <span class="text-[22px] md:text-2xl font-normal font-josefin"
-                >Snacks</span
-              >
-              <span
-                class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400"
-                >100%</span
-              >
-            </li>
-          </ul>
         </div>
-
-        <!-- Right Column -->
-        <div class="grid grid-rows-2 gap-4">
-          <ul class="mt-10 space-y-4">
-            <li
-              class="flex justify-between items-center border-b border-gray-700 py-2"
-            >
-              <span class="text-[22px] md:text-2xl font-normal font-josefin"
-                >Fast Service</span
-              >
-              <span
-                class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400"
-                >100%</span
-              >
-            </li>
-            <li
-              class="flex justify-between items-center border-b border-gray-700 py-2"
-            >
-              <span class="text-[22px] md:text-2xl font-normal font-josefin"
-                >Free Reservation</span
-              >
-              <span
-                class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400"
-                >100%</span
-              >
-            </li>
-            <li
-              class="flex justify-between items-center border-b border-gray-700 py-2"
-            >
-              <span class="text-[22px] md:text-2xl font-normal font-josefin"
-                >Free Delivery</span
-              >
-              <span
-                class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400"
-                >100%</span
-              >
-            </li>
-            <li
-              class="flex justify-between items-center border-b border-gray-700 py-2"
-            >
-              <span class="text-[22px] md:text-2xl font-normal font-josefin"
-                >Free Parking</span
-              >
-              <span
-                class="text-[22px] md:text-2xl font-normal font-josefin text-blue-400"
-                >100%</span
-              >
-            </li>
-          </ul>
-          <div>
-            <img
-              src="images/Rectangle 84.jpg"
-              alt="Coffee Cup"
-              class="rounded-lg shadow-lg w-full"
-            />
+        <div class="bg-[#0A1A2E] items-center rounded-lg">
+          <img src="images/Rectangle 83.png" alt="" />
+          <div class="flex items-center justify-between p-4">
+            <div class="">
+              <h3 class="font-normal mb-2 md:text-2xl text-[22px] font-Josefin text-[#1D71B8]">
+                Starter
+              </h3>
+              <p class="font-Italiana font-normal md:text-2xl text-white text-sm">
+                Quantity: 4
+              </p>
+            </div>
+            <a href="product2.html" class="text-blue-400 font-semibold flex items-center hover:underline">
+              <img src="images/arrow.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="bg-[#0A1A2E] items-center rounded-lg">
+          <img src="images/Rectangle 83-1.png" alt="" />
+          <div class="flex items-center justify-between p-4">
+            <div class="">
+              <h3 class="font-normal mb-2 md:text-2xl text-[22px] font-Josefin text-[#1D71B8]">
+                Starter
+              </h3>
+              <p class="font-Italiana font-normal md:text-2xl text-white text-sm">
+                Quantity: 4
+              </p>
+            </div>
+            <a href="product2.html" class="text-blue-400 font-semibold flex items-center hover:underline">
+              <img src="images/arrow.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="bg-[#0A1A2E] items-center rounded-lg">
+          <img src="images/Rectangle 83-2.png" alt="" />
+          <div class="flex items-center justify-between p-4">
+            <div class="">
+              <h3 class="font-normal mb-2 md:text-2xl text-[22px] font-Josefin text-[#1D71B8]">
+                Starter
+              </h3>
+              <p class="font-Italiana font-normal md:text-2xl text-white text-sm">
+                Quantity: 4
+              </p>
+            </div>
+            <a href="product2.html" class="text-blue-400 font-semibold flex items-center hover:underline">
+              <img src="images/arrow.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="bg-[#0A1A2E] items-center rounded-lg">
+          <img src="images/Rectangle 83-3.png" alt="" />
+          <div class="flex items-center justify-between p-4">
+            <div class="">
+              <h3 class="font-normal mb-2 md:text-2xl text-[22px] font-Josefin text-[#1D71B8]">
+                Starter
+              </h3>
+              <p class="font-Italiana font-normal md:text-2xl text-white text-sm">
+                Quantity: 4
+              </p>
+            </div>
+            <a href="product2.html" class="text-blue-400 font-semibold flex items-center hover:underline">
+              <img src="images/arrow.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="bg-[#0A1A2E] items-center rounded-lg">
+          <img src="images/Rectangle 83-4.png" alt="" />
+          <div class="flex items-center justify-between p-4">
+            <div class="">
+              <h3 class="font-normal mb-2 md:text-2xl text-[22px] font-Josefin text-[#1D71B8]">
+                Starter
+              </h3>
+              <p class="font-Italiana font-normal md:text-2xl text-white text-sm">
+                Quantity: 4
+              </p>
+            </div>
+            <a href="product2.html" class="text-blue-400 font-semibold flex items-center hover:underline">
+              <img src="images/arrow.svg" alt="" />
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Product Card  -->
-    <section class="blog-card md:py-16 py-8">
-      <div class="container mx-auto">
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div class="bg-[#0A1A2E] items-center rounded-lg">
-            <img src="images/Rectangle 82.png" alt="" />
-            <div class="flex items-center justify-between p-4">
-              <div class="">
-                <h3
-                  class="font-normal mb-2 md:text-2xl text-[22px] font-Josefin text-[#1D71B8]"
-                >
-                  Starter
-                </h3>
-                <p
-                  class="font-Italiana font-normal md:text-2xl text-white text-sm"
-                >
-                  Quantity: 4
-                </p>
-              </div>
-              <a
-                href="product2.html"
-                class="text-blue-400 font-semibold flex items-center hover:underline"
-              >
-                <img src="images/arrow.svg" alt="" />
-              </a>
-            </div>
-          </div>
-          <div class="bg-[#0A1A2E] items-center rounded-lg">
-            <img src="images/Rectangle 83.png" alt="" />
-            <div class="flex items-center justify-between p-4">
-              <div class="">
-                <h3
-                  class="font-normal mb-2 md:text-2xl text-[22px] font-Josefin text-[#1D71B8]"
-                >
-                  Starter
-                </h3>
-                <p
-                  class="font-Italiana font-normal md:text-2xl text-white text-sm"
-                >
-                  Quantity: 4
-                </p>
-              </div>
-              <a
-                href="product2.html"
-                class="text-blue-400 font-semibold flex items-center hover:underline"
-              >
-                <img src="images/arrow.svg" alt="" />
-              </a>
-            </div>
-          </div>
-          <div class="bg-[#0A1A2E] items-center rounded-lg">
-            <img src="images/Rectangle 83-1.png" alt="" />
-            <div class="flex items-center justify-between p-4">
-              <div class="">
-                <h3
-                  class="font-normal mb-2 md:text-2xl text-[22px] font-Josefin text-[#1D71B8]"
-                >
-                  Starter
-                </h3>
-                <p
-                  class="font-Italiana font-normal md:text-2xl text-white text-sm"
-                >
-                  Quantity: 4
-                </p>
-              </div>
-              <a
-                href="product2.html"
-                class="text-blue-400 font-semibold flex items-center hover:underline"
-              >
-                <img src="images/arrow.svg" alt="" />
-              </a>
-            </div>
-          </div>
-          <div class="bg-[#0A1A2E] items-center rounded-lg">
-            <img src="images/Rectangle 83-2.png" alt="" />
-            <div class="flex items-center justify-between p-4">
-              <div class="">
-                <h3
-                  class="font-normal mb-2 md:text-2xl text-[22px] font-Josefin text-[#1D71B8]"
-                >
-                  Starter
-                </h3>
-                <p
-                  class="font-Italiana font-normal md:text-2xl text-white text-sm"
-                >
-                  Quantity: 4
-                </p>
-              </div>
-              <a
-                href="product2.html"
-                class="text-blue-400 font-semibold flex items-center hover:underline"
-              >
-                <img src="images/arrow.svg" alt="" />
-              </a>
-            </div>
-          </div>
-          <div class="bg-[#0A1A2E] items-center rounded-lg">
-            <img src="images/Rectangle 83-3.png" alt="" />
-            <div class="flex items-center justify-between p-4">
-              <div class="">
-                <h3
-                  class="font-normal mb-2 md:text-2xl text-[22px] font-Josefin text-[#1D71B8]"
-                >
-                  Starter
-                </h3>
-                <p
-                  class="font-Italiana font-normal md:text-2xl text-white text-sm"
-                >
-                  Quantity: 4
-                </p>
-              </div>
-              <a
-                href="product2.html"
-                class="text-blue-400 font-semibold flex items-center hover:underline"
-              >
-                <img src="images/arrow.svg" alt="" />
-              </a>
-            </div>
-          </div>
-          <div class="bg-[#0A1A2E] items-center rounded-lg">
-            <img src="images/Rectangle 83-4.png" alt="" />
-            <div class="flex items-center justify-between p-4">
-              <div class="">
-                <h3
-                  class="font-normal mb-2 md:text-2xl text-[22px] font-Josefin text-[#1D71B8]"
-                >
-                  Starter
-                </h3>
-                <p
-                  class="font-Italiana font-normal md:text-2xl text-white text-sm"
-                >
-                  Quantity: 4
-                </p>
-              </div>
-              <a
-                href="product2.html"
-                class="text-blue-400 font-semibold flex items-center hover:underline"
-              >
-                <img src="images/arrow.svg" alt="" />
-              </a>
-            </div>
+  <!-- Footer -->
+  <footer class="md:py-16 py-8 bg-[#000D17] text-white font-Italiana bg-cover bg-center"
+    style="background-image: url('images/Smoke.png')">
+    <div class="container mx-auto px-4 md:px-0 font-Italiana">
+      <div class="flex flex-col lg:flex-row justify-between items-center mb-6 space-y-6 lg:space-y-0">
+        <div class="flex flex-col gap-4 items-center md:flex-row space-x-4">
+          <img alt="Moonstruck Coffee logo" class="h-[74px] md:h-[101px] md:w-[101px] w-[74px]" src="images/logo.png" />
+          <h1 class="md:text-6xl text-2xl font-Italiana font-normal text-center lg:text-left">
+            MOONSTRUCK COFFEE
+          </h1>
+        </div>
+        <!-- Social Media Icons -->
+        <div class="flex gap-2 items-center md:block hidden">
+          <h2 class="md:text-2xl font-bold">SOCIAL ICONS</h2>
+          <div class="flex space-x-4 items-center">
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/Frame.svg" alt="" />
+            </a>
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/Frame2.svg" alt="" />
+            </a>
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/Frame3.svg" alt="" />
+            </a>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer
-      class="md:py-16 py-8 bg-[#000D17] text-white font-Italiana bg-cover bg-center"
-      style="background-image: url('images/Smoke.png')"
-    >
-      <div class="container mx-auto px-4 md:px-0 font-Italiana">
-        <div
-          class="flex flex-col lg:flex-row justify-between items-center mb-6 space-y-6 lg:space-y-0"
-        >
-          <div class="flex flex-col gap-4 items-center md:flex-row space-x-4">
-            <img
-              alt="Moonstruck Coffee logo"
-              class="h-[74px] md:h-[101px] md:w-[101px] w-[74px]"
-              src="images/logo.png"
-            />
-            <h1
-              class="md:text-6xl text-2xl font-Italiana font-normal text-center lg:text-left"
-            >
-              MOONSTRUCK COFFEE
-            </h1>
+      <!-- Bottom Section -->
+      <div class="flex flex-col lg:flex-row justify-between lg:items-start space-y-12 lg:space-y-0">
+        <!-- Left Section -->
+        <div class="">
+          <div class="flex flex-col gap-4 md:gap-8 md:flex-row md:mt-0 mt-4">
+            <h2 class="md:text-2xl font-bold text-[17px] font-josefin font-medium mb-2">
+              OUR PAGES
+            </h2>
+            <nav class="flex flex-wrap font-josefin font-normal gap-6 md:text-2xl font-bold text-[#9E9E9E] text-base">
+              <a class="hover:text-blue-500 transition" href="#">Home</a>
+              <a class="hover:text-blue-500 transition" href="#">About</a>
+              <a class="hover:text-blue-500 transition" href="#">Product</a>
+              <a class="hover:text-blue-500 transition" href="#">Gallery</a>
+              <a class="hover:text-blue-500 transition" href="#">Blog</a>
+              <a class="hover:text-blue-500 transition" href="#">Contact Us</a>
+            </nav>
           </div>
-          <!-- Social Media Icons -->
-          <div class="flex gap-2 items-center md:block hidden">
-            <h2 class="md:text-2xl font-bold">SOCIAL ICONS</h2>
-            <div class="flex space-x-4 items-center">
-              <a
-                class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
-                href="#"
-              >
-                <img src="./images/Frame.svg" alt="" />
-              </a>
-              <a
-                class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
-                href="#"
-              >
-                <img src="./images/Frame2.svg" alt="" />
-              </a>
-              <a
-                class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
-                href="#"
-              >
-                <img src="./images/Frame3.svg" alt="" />
-              </a>
+          <div class="flex flex-col gap-4 md:gap-8 md:flex-row md:mt-0 mt-4">
+            <h2 class="md:text-2xl font-bold text-[17px] font-josefin font-medium mb-2">
+              CONTACT US
+            </h2>
+            <div class="font-josefin font-normal md:text-2xl font-bold text-[#9E9E9E]">
+              <p>+91 096647 21479 | moonstruckcoffee566@gmail.com</p>
+              <p class="text-balance">
+                SNS Atria Besides Happy Excelencia, opp. Jolly Party Plot,
+                Vesu, Surat, Gujarat 395007
+              </p>
             </div>
           </div>
         </div>
 
-        <!-- Bottom Section -->
-        <div
-          class="flex flex-col lg:flex-row justify-between lg:items-start space-y-12 lg:space-y-0"
-        >
-          <!-- Left Section -->
-          <div class="">
-            <div class="flex flex-col gap-4 md:gap-8 md:flex-row md:mt-0 mt-4">
-              <h2
-                class="md:text-2xl font-bold text-[17px] font-josefin font-medium mb-2"
-              >
-                OUR PAGES
-              </h2>
-              <nav
-                class="flex flex-wrap font-josefin font-normal gap-6 md:text-2xl font-bold text-[#9E9E9E] text-base"
-              >
-                <a class="hover:text-blue-500 transition" href="#">Home</a>
-                <a class="hover:text-blue-500 transition" href="#">About</a>
-                <a class="hover:text-blue-500 transition" href="#">Product</a>
-                <a class="hover:text-blue-500 transition" href="#">Gallery</a>
-                <a class="hover:text-blue-500 transition" href="#">Blog</a>
-                <a class="hover:text-blue-500 transition" href="#"
-                  >Contact Us</a
-                >
-              </nav>
-            </div>
-            <div class="flex flex-col gap-4 md:gap-8 md:flex-row md:mt-0 mt-4">
-              <h2
-                class="md:text-2xl font-bold text-[17px] font-josefin font-medium mb-2"
-              >
-                CONTACT US
-              </h2>
-              <div
-                class="font-josefin font-normal md:text-2xl font-bold text-[#9E9E9E]"
-              >
-                <p>+91 096647 21479 | moonstruckcoffee566@gmail.com</p>
-                <p class="text-balance">
-                  SNS Atria Besides Happy Excelencia, opp. Jolly Party Plot,
-                  Vesu, Surat, Gujarat 395007
-                </p>
-              </div>
-            </div>
+        <!-- Right Section -->
+        <div>
+          <h2 class="md:text-2xl font-bold font-bold mb-2">LATEST POSTS</h2>
+          <div class="grid grid-cols-3 md:grid-cols-3 gap-4">
+            <img alt="Image of a coffee cup and a croissant" class="w-full h-24 object-cover rounded-md"
+              src="./images/footericon.png" />
+
+            <img alt="Image of a dish with vegetables" class="w-full h-24 object-cover rounded-md"
+              src="images/footericon2.png" />
+
+            <img alt="Image of a coffee cup" class="w-full h-24 object-cover rounded-md"
+              src="./images/footericon3.png" />
           </div>
+        </div>
 
-          <!-- Right Section -->
-          <div>
-            <h2 class="md:text-2xl font-bold font-bold">LATEST POSTS</h2>
-            <div class="grid grid-cols-3 md:grid-cols-3 gap-4">
-              <img
-                alt="Image of a coffee cup and a croissant"
-                class="w-full h-24 object-cover rounded-md"
-                src="./images/footericon.png"
-              />
-
-              <img
-                alt="Image of a dish with vegetables"
-                class="w-full h-24 object-cover rounded-md"
-                src="images/footericon2.png"
-              />
-
-              <img
-                alt="Image of a coffee cup"
-                class="w-full h-24 object-cover rounded-md"
-                src="./images/footericon3.png"
-              />
-            </div>
-          </div>
-
-          <!-- Social Media Icons -->
-          <div class="flex flex-col gap-2 md:hidden">
-            <h2 class="md:text-2xl font-bold">SOCIAL ICONS</h2>
-            <div class="flex space-x-4 items-center">
-              <a
-                class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
-                href="#"
-              >
-                <img src="./images/Frame.svg" alt="" />
-              </a>
-              <a
-                class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
-                href="#"
-              >
-                <img src="./images/Frame2.svg" alt="" />
-              </a>
-              <a
-                class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
-                href="#"
-              >
-                <img src="./images/Frame3.svg" alt="" />
-              </a>
-            </div>
+        <!-- Social Media Icons -->
+        <div class="flex flex-col gap-2 md:hidden">
+          <h2 class="md:text-2xl font-bold">SOCIAL ICONS</h2>
+          <div class="flex space-x-4 items-center">
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/Frame.svg" alt="" />
+            </a>
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/Frame2.svg" alt="" />
+            </a>
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/Frame3.svg" alt="" />
+            </a>
           </div>
         </div>
       </div>
-    </footer>
-  </body>
-  <script>
-    document
-      .getElementById("menu-toggle")
-      .addEventListener("click", function () {
-        const mobileMenu = document.getElementById("mobile-menu");
-        mobileMenu.classList.toggle("hidden");
-      });
-
-    const mobileLinks = document.querySelectorAll("#mobile-menu a");
-    mobileLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        document.getElementById("mobile-menu").classList.add("hidden");
-      });
+    </div>
+  </footer>
+</body>
+<script>
+  document
+    .getElementById("menu-toggle")
+    .addEventListener("click", function () {
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenu.classList.toggle("hidden");
     });
-    document.addEventListener("scroll", () => {
-      const header = document.getElementById("header");
-      if (window.scrollY > 100) {
-        header.classList.add("bg-[#000d17]", "opacity-90");
-      } else {
-        header.classList.remove("bg-[#000d17]", "opacity-50");
-      }
+
+  const mobileLinks = document.querySelectorAll("#mobile-menu a");
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.add("hidden");
     });
-  </script>
+  });
+  document.addEventListener("scroll", () => {
+    const header = document.getElementById("header");
+    if (window.scrollY > 100) {
+      header.classList.add("bg-[#000d17]", "opacity-90");
+    } else {
+      header.classList.remove("bg-[#000d17]", "opacity-50");
+    }
+  });
+</script>
+
 </html>
