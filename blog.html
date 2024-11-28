@@ -14,37 +14,7 @@
 
   
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          container: {
-            padding: {
-              DEFAULT: '1rem',
-              sm: '2rem',
-              lg: '4rem',
-              xl: '5rem',
-              '2xl': '6rem',
-            },
-          },
-          fontFamily: {
-            sans: ['"Josefin Sans"', "sans-serif"],
-            josefin: ['"Josefin Sans"', "sans-serif"],
-            antonio: ['"Antonio Fischer"', "cursive"],
-            italiana: ['"Italiana"', 'serif'],
-
-
-          },
-          backgroundImage: {
-            "gradient-border":
-              "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #1D71B8 100%)",
-          },
-          
-        },
-      },
-    };
-  </script>
-
+ 
 
 </head>
 
@@ -270,11 +240,12 @@
   </section>
 
   <!-- Footer -->
-  <footer class="md:py-16 py-8 bg-[#000D17] text-white font-italiana bg-cover bg-center" style="background-image: url('images/Smoke.png')">
+  <footer class="md:py-16 py-8 bg-[#000D17] text-white font-italiana bg-cover bg-center"
+    style="background-image: url('images/Smoke.png')">
     <div class="container mx-auto px-4 md:px-0 font-italiana">
       <div class="flex flex-col items-center justify-between lg:flex-row lg:space-y-0 mb-6 space-y-6">
         <div class="flex flex-col gap-4 items-center md:flex-row space-x-4">
-          <img alt="Moonstruck Coffee logo" class="h-[74px] md:h-[101px] md:w-[101px] w-[74px]" src="images/logo.png">
+          <img alt="Moonstruck Coffee logo" class="h-[74px] md:h-[101px] md:w-[101px] w-[74px]" src="images/logo.png" />
           <h1 class="md:text-6xl text-2xl font-italiana font-normal text-center lg:text-left">
             MOONSTRUCK COFFEE
           </h1>
@@ -283,14 +254,17 @@
         <div class="flex gap-2 hidden items-center md:flex mr-16">
           <h2 class="md:text-2xl font-bold">SOCIAL ICONS</h2>
           <div class="flex space-x-4 items-center">
-            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2" href="#">
-              <img src="./images/Frame.svg" alt="">
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/Facebook.svg" alt="" />
             </a>
-            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2" href="#">
-              <img src="./images/Frame2.svg" alt="">
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/Twitter.svg" alt="" />
             </a>
-            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2" href="#">
-              <img src="./images/Frame3.svg" alt="">
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/intragram.svg" alt="" />
             </a>
           </div>
         </div>
@@ -305,21 +279,31 @@
               OUR PAGES
             </h2>
             <nav class="flex flex-wrap font-normal gap-4 md:gap-4 md:gap-6">
-              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition" href="#">Home</a>
-              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition" href="#">About</a>
-              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition" href="#">Product</a>
-              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition" href="#">Gallery</a>
-              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition" href="#">Blog</a>
-              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition" href="#">Contact Us</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition "
+                href="index.html">Home</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="about.html">About</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="product.html">Product</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="gallery.html">Gallery</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="blog.html">Blog</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="contact_us.html">Contact Us</a>
             </nav>
           </div>
           <div class="flex flex-col gap-4 md:gap-8 md:flex-row md:mt-0 mt-4">
             <h2 class="font-bold font-josefin font-medium md:text-2xl text-[17px]">
               CONTACT US
             </h2>
-            <div class="font-josefin font-normal   md:text-2xl md:words-wrap text-[#9E9E9E] text-base transition">
-              <p class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl md:words-wrap text-[#9E9E9E] text-sm transition">+91 096647 21479 | moonstruckcoffee566@gmail.com</p>
-              <p class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl md:words-wrap text-[#9E9E9E] text-sm transition">
+            <div class="font-josefin font-normal md:text-2xl md:words-wrap text-base transition">
+              <p
+                class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl md:words-wrap text-[#9E9E9E] text-sm transition">
+                +91 096647 21479 | moonstruckcoffee566@gmail.com
+              </p>
+              <p
+                class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl md:words-wrap text-[#9E9E9E] text-sm transition">
                 SNS Atria Besides Happy Excelencia, opp. Jolly Party Plot,
                 Vesu, Surat, Gujarat 395007
               </p>
@@ -329,13 +313,18 @@
 
         <!-- Right Section -->
         <div>
-          <h2 class="font-josefin font-medium items-center md:mb-4 md:text-2xl  text-lg uppercase">LATEST POSTS</h2>
+          <h2 class="font-josefin font-medium items-center md:mb-4 md:text-2xl text-lg uppercase">
+            LATEST POSTS
+          </h2>
           <div class="grid grid-cols-3 md:grid-cols-3 gap-4">
-            <img alt="Image of a coffee cup and a croissant" class="w-full h-24 object-cover rounded-md" src="./images/footericon.png">
+            <img alt="Image of a coffee cup and a croissant" class="w-full h-24 object-cover rounded-md"
+              src="./images/footericon.png" />
 
-            <img alt="Image of a dish with vegetables" class="w-full h-24 object-cover rounded-md" src="images/footericon2.png">
+            <img alt="Image of a dish with vegetables" class="w-full h-24 object-cover rounded-md"
+              src="images/footericon2.png" />
 
-            <img alt="Image of a coffee cup" class="w-full h-24 object-cover rounded-md" src="./images/footericon3.png">
+            <img alt="Image of a coffee cup" class="w-full h-24 object-cover rounded-md"
+              src="./images/footericon3.png" />
           </div>
         </div>
 
@@ -343,22 +332,25 @@
         <div class="flex flex-col gap-2 md:hidden">
           <h2 class="md:text-2xl font-bold">SOCIAL ICONS</h2>
           <div class="flex space-x-4 items-center">
-            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2" href="#">
-              <img src="./images/Frame.svg" alt="">
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/Facebook.svg" alt="" />
             </a>
-            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2" href="#">
-              <img src="./images/Frame2.svg" alt="">
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/Twitter.svg" alt="" />
             </a>
-            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2" href="#">
-              <img src="./images/Frame3.svg" alt="">
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/intragram.svg" alt="" />
             </a>
           </div>
         </div>
       </div>
     </div>
   </footer>
-
+  
+  <script src="script.js"></script>  
 </body>
- <script src="script.js"></script>
 
 </html>
