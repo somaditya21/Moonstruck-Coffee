@@ -25,16 +25,14 @@ font-style: normal;
     gap: 0.5rem;
     align-items: center;
     margin: 1rem 0;
-}    
-
+}
 .bg-cover.bg-center.py-20 {
     flex: 1;
     height: calc(100vh - 145px);
     display: flex;
     align-items: center;
     justify-content: center;
-}    
-
+}
 
 
 
@@ -46,8 +44,7 @@ font-style: normal;
     top: 0;
     bottom: 0;
     background: #000e1bd6;
-}    
-
+}
 
 
 
