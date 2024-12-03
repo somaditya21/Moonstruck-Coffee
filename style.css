@@ -62,3 +62,11 @@ font-style: normal;
     bottom: 0;
     background: #000e1bd6;
 }
+
+
+/* Hide default icons in date and time inputs */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}

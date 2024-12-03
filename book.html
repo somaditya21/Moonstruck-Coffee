@@ -55,11 +55,9 @@
     <div class="bg-[#000D17] block flex font-sans items-center justify-between md:hidden p-2 px-4 text-white">
         <div class="text-sm">9:41</div>
       <div class="flex space-x-3">
-        <div class="w-4 h-4">
-          <img src="images/Cellular Connection.svg" alt="">
+        <div class="w-[30px] h-4">[30px]          <img src="images/Cellular Connection.svg" alt="">
         </div>
-        <div class="w-4 h-4">
-          <img src="images/Wifi.svg" alt="">
+        <div class="w-[30px] h-4">[30px]          <img src="images/Wifi.svg" alt="">
         </div>
         <div class="flex items-center space-x-1">
           <div class="w-6 h-3">
@@ -123,20 +121,70 @@
     <!-- Form Section  -->
     <section class="bg-[#000D17] py-16">
       <div class="container mx-auto px-4">
-        <h2 class="before:bg-[#1D71B8] before:content-[''] before:h-1 before:inline-block before:md:mr-4 mr-2 before:mr-4   before:w-[120px] flex font-josefin font-medium items-center mb-4 md:text-2xl text-lg uppercase">Book A Table</h2>
+        <!-- Title -->
+        <h2 class="before:bg-[#1D71B8] before:content-[''] before:h-1 before:inline-block before:md:mr-4 mr-2 before:w-[120px] flex font-josefin font-medium items-center mb-4 md:text-2xl text-lg uppercase">
+          Book A Table
+        </h2>
+    
+        <!-- Form -->
         <form class="grid grid-cols-1 md:grid-cols-3 lg:gap-8">
-          <input class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white  focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4" placeholder="Your Name" type="text">
-          <input class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white  focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4" placeholder="Contact No" type="text">
-          <input class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white  focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4" placeholder="Email Id" type="email">
-          <input class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white  focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4" placeholder="Persons" type="text">
-          <input class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white  focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4" type="date">
-          <input class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white  focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4" type="time">
-          <button class="bg-[#1D71B8] text-white px-6 py-3 md:px-8 md:py-4 text-lg md:text-[28px] font-normal font-josefin hover:bg-[#1D71B8] transition duration-300" type="submit">
+          <!-- Input Fields -->
+          <input
+            class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+            placeholder="Your Name"
+            type="text"
+          />
+          <input
+            class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+            placeholder="Contact No"
+            type="text"
+          />
+          <input
+            class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+            placeholder="Email Id"
+            type="email"
+          />
+          <input
+            class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+            placeholder="Persons"
+            type="text"
+          />
+    
+          <!-- Date Field -->
+          <div class="w-full flex items-center bg-[rgba(29,113,184,0.13)] mb-4">
+            <input
+              class="w-full p-4 bg-transparent text-white focus:outline-none appearance-none"
+              type="date"
+            />
+            <span class="pr-4 text-blue-500">
+              <img src="./images/formicon (1).svg" class="lg:w-[30px] lg:h-[30px]" alt="">
+            </span>
+          </div>
+    
+          <!-- Time Field -->
+          <div class="w-full flex items-center bg-[rgba(29,113,184,0.13)] mb-4">
+            <input
+              class="w-full p-4 bg-transparent text-white focus:outline-none appearance-none"
+              type="time"
+            />
+            <span class="pr-4 text-blue-500">
+              <img src="./images/formicon (2).svg" class="lg:w-[30px] lg:h-[30px]" alt="">
+            </span>
+          </div>
+    
+          <!-- Submit Button -->
+          <button
+            class="bg-[#1D71B8] text-white px-6 py-3 md:px-8 lg:py-4 text-lg lg:text-[28px] font-normal font-josefin hover:bg-[#1D71B8] transition duration-300"
+            type="submit"
+          >
             Submit Now
           </button>
         </form>
       </div>
     </section>
+    
+  
+    
 
     <!-- RESERVATION  Section -->
     <section class="relative bg-cover bg-center text-white" style="background-image: url('./images/Rectangle\ 15.png')">
