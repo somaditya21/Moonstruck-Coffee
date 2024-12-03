@@ -16,6 +16,10 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/flatpickr.min.js"></script>
+
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -48,7 +52,7 @@
 
   <body class="bg-[#0D1B2A] text-white">
     <div class="absolute top-0 left-0 z-10">
-      <img src="images/Smoke.png" alt="" class="w-full">
+      <img src="images/Smoke.png" alt="" class="w-full lg:h-[600px]">
     </div>
 
     <!-- Header -->
@@ -122,94 +126,168 @@
     <section class="bg-[#000D17] py-16">
       <div class="container mx-auto px-4">
         <!-- Title -->
-        <h2 class="before:bg-[#1D71B8] before:content-[''] before:h-1 before:inline-block before:md:mr-4 mr-2 before:w-[120px] flex font-josefin font-medium items-center mb-4 md:text-2xl text-lg uppercase">
+        <h2 class="before:bg-[#1D71B8] before:content-[''] before:h-1 before:inline-block before:md:mr-4 mr-2 before:w-[120px] flex font-josefin font-medium items-center mb-4 md:text-2xl text-lg uppercase text-white">
           Book A Table
         </h2>
     
         <!-- Form -->
-        <form class="grid grid-cols-1 md:grid-cols-3 lg:gap-8">
+        <form class="grid grid-cols-1 md:grid-cols-3 lg:gap-8" action="#" method="POST">
           <!-- Input Fields -->
           <input
             class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
             placeholder="Your Name"
             type="text"
-          />
+            required
+          >
           <input
             class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
             placeholder="Contact No"
             type="text"
-          />
+            required
+          >
           <input
             class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
             placeholder="Email Id"
             type="email"
-          />
+            required
+          >
           <input
             class="w-full p-4 bg-[rgba(29,113,184,0.13)] text-white focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
             placeholder="Persons"
-            type="text"
-          />
+            type="number"
+            min="1"
+            required
+          >
     
           <!-- Date Field -->
-          <div class="w-full flex items-center bg-[rgba(29,113,184,0.13)] mb-4">
+          <div class="relative w-full flex items-center bg-[rgba(29,113,184,0.13)] mb-4 rounded-lg">
             <input
               class="w-full p-4 bg-transparent text-white focus:outline-none appearance-none"
               type="date"
-            />
-            <span class="pr-4 text-blue-500">
-              <img src="./images/formicon (1).svg" class="lg:w-[30px] lg:h-[30px]" alt="">
+              placeholder="Date"
+              required
+            >
+            <span class="absolute right-4">
+              <img src="./images/formicon (1).svg" class="lg:w-[30px] lg:h-[30px]" alt="Date Icon">
             </span>
           </div>
     
           <!-- Time Field -->
-          <div class="w-full flex items-center bg-[rgba(29,113,184,0.13)] mb-4">
+          <div class="relative w-full flex items-center bg-[rgba(29,113,184,0.13)] mb-4 rounded-lg">
             <input
               class="w-full p-4 bg-transparent text-white focus:outline-none appearance-none"
               type="time"
-            />
-            <span class="pr-4 text-blue-500">
-              <img src="./images/formicon (2).svg" class="lg:w-[30px] lg:h-[30px]" alt="">
+              placeholder="Time"
+              required
+            >
+            <span class="absolute right-4">
+              <img src="./images/formicon (2).svg" class="lg:w-[30px] lg:h-[30px]" alt="Time Icon">
             </span>
           </div>
     
           <!-- Submit Button -->
-          <a
-            class="bg-[#1D71B8] lg:w-[372px]  text-white px-6 py-3 md:px-8 lg:py-4 text-lg lg:text-[28px] font-normal font-josefin hover:bg-[#1D71B8] transition duration-300"
+          <button
+            class="bg-[#1D71B8] lg:w-[372px] text-white px-6 py-3 md:px-8 lg:py-4 text-lg lg:text-[28px] font-normal font-josefin hover:bg-[#1564a0] transition duration-300"
             type="submit"
           >
             Submit Now
-        </a>
+          </button>
         </form>
       </div>
     </section>
     
   
-    
-
     <!-- RESERVATION  Section -->
-    <section class="relative bg-cover bg-center text-white" style="background-image: url('./images/Rectangle\ 15.png')">
-      <div class="bg-[#0A0E14] bg-opacity-80 md:py-16 py-8">
-        <div class="container md:text-left mx-auto px-4">
-          <!-- Section Title -->
-          <div class="mb-4">
-            <h3 class="before:bg-[#1D71B8] before:content-[''] before:h-1 before:inline-block before:md:mr-4 before:mr-4 before:w-[120px] flex font-josefin font-medium items-center mb-2 md:text-2xl md:text-left text-lg uppercase">
-              Reservation
-            </h3>
+    <section class="lg:py-16 py-8 bg-[#000D17] text-white relative bg-shadow-bg" style="background-image: url('images/hero-bg.png')">
+      <div class="container relative mx-auto px-4">
+        <div class="flex flex-col gap-8 justify-between lg:flex-row">
+          <div class="lg:w-[589px] w-full">
+            <div class="mb-12 text-center">
+              <h3 class="before:bg-[#1D71B8] before:content-[''] before:h-1 before:inline-block before:lg:mr-4 mr-2 before:mr-4 before:w-[120px] flex font-josefin font-medium items-center mb-4 lg:text-2xl text-lg uppercase">
+                Reservation
+              </h3>
+            </div>
+            <p class="cursor-pointer font-italiana font-normal mb-4 lg:text-6xl text-2xl">
+              Open Timing
+            </p>
+            <p class="cursor-pointer font-josefin font-normal mb-6 lg:text-2xl text-left text-sm words-wrap">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <a href="book.html" class="bg-[#1D71B8] text-white px-6 py-3 lg:px-8 lg:py-4 text-lg lg:text-[28px] font-normal font-josefin hover:bg-[#1D71B8] transition duration-300">
+              Book A Table
+            </a>
           </div>
-          <h2 class="font-italiana font-normal mb-4 md:text-6xl text-2xl">
-            This Evening Will Be Great!
-          </h2>
-          <p class="mb-6 md:text-2xl md:w-[588px]  text-left text-sm">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
-          <a href="#" class="bg-[#1D71B8] font-josefin font-normal md:text-[28px] px-8 py-3 text-lg text-white">
-            Book A Table
-          </a>
+  
+          <div class="flex flex-col justify-center lg:h-[342px] lg:w-[529px] p-6 rounded-lg w-full lg:bg-[#000d17b5] bg-black">
+            <div class="flex justify-center mb-4">
+              <img src="images/clock.svg" alt="">
+            </div>
+            <ul class="text-center space-y-4">
+              <li>
+                <span class="font-normal text-center mb-4 font-josefin lg:text-[22px] text-lg">Sunday to Tuesday:</span>
+                <span class="block font-bold font-josefin lg:text-2xl text-[#1D71B8] text-base">08:00 - 22:00</span>
+              </li>
+              <li>
+                <span class="font-normal text-center mb-4 font-josefin lg:text-[22px] text-lg">Friday to Saturday:</span>
+                <span class="block lg:text-2xl font-bold text-base font-josefin font-bold text-[#1D71B8]">11:00 -
+                  19:00</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
+   <!-- Blog  -->
+    <section class="bg-[#000D17] font-italiana py-8 md:py-16 relative text-white">
+      <div class="bg-cover border-[#1D71B8] border-b-2 border-blue container mx-auto px-4 text-center">
+        <div class="mb-12">
+          <h3 class="before:bg-[#1D71B8] before:content-[''] before:h-1 before:inline-block before:md:mr-4 before:mr-4 before:w-[120px] flex font-josefin font-medium items-center mb-2 md:justify-center md:text-2xl text-lg uppercase">
+           GET IN TOUCH
+          </h3>
+          <h1 class="font-italiana font-normal md:text-6xl md:text-center text-2xl text-left">
+            Contact Information
+          </h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div class="flex flex-col items-center">
+            <div class="mb-4">
+              <img src="images/email.png" alt="Email Icon" class="w-10 h-10">
+            </div>
+            <h3 class="text-2xl md:text-3xl font-normal font-italiana">
+              Write Us
+            </h3>
+            <p class="text-[#9E9E9E] text-sm md:text-2xl my-2 font-josefin font-light">
+              moonstruckcoffee599@gmail.com
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="mb-4">
+              <img src="images/Frame.png" alt="Phone Icon" class="w-10 h-10">
+            </div>
+            <h3 class="text-2xl md:text-3xl font-normal font-italiana">
+              Call Us
+            </h3>
+            <p class="text-[#9E9E9E] text-sm md:text-2xl my-2 font-josefin font-light">
+              +91 096647 21479
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="mb-4">
+              <img src="images/location.png" alt="Location Icon" class="w-10 h-10">
+            </div>
+            <h3 class="text-2xl md:text-3xl font-normal font-italiana">
+              Visit Us
+            </h3>
+            <p class="text-[#9E9E9E] text-sm md:text-2xl my-2 font-josefin font-light text-center">
+              SNS Atria Besides Happy Excelencia
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <!-- Footer -->
     <footer class="bg-center bg-cover  font-italiana md:py-16 py-8 text-white" style="background-image: url('images/Smoke2.png')">
       <div class="bg-contain bg-no-repeat bg-right container font-italiana lg:px-4 mx-auto" style="background-image: url('images/footer-right-bg.svg');">
@@ -302,8 +380,13 @@
         </div>
       </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="script.js"></script>
+
+    <script>
+      flatpickr("input[type='date']", {});
+      flatpickr("input[type='time']", { enableTime: true, noCalendar: true });
+    </script>
   
 
 </body>
