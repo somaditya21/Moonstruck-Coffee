@@ -48,9 +48,11 @@ font-style: normal;
 
 
 
-.container{
-  max-width: 1440px;
-}
+/* .container{
+  max-width: 1432px;
+  width: 100%;
+  margin: 0 auto;
+} */
 
 
 .bg-shadow-bg:before {
@@ -69,4 +71,8 @@ input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
+}
+
+.fill-text {
+  fill: black;
 }
