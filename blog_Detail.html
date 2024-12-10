@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Detail</title>
-    <link rel="icon" type="logo/png" sizes="32x32" href="images/logo.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-    rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
-  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Detail</title>
+  <link rel="icon" type="logo/png" sizes="32x32" href="images/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Italiana&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -39,379 +42,316 @@
             "gradient-border":
               "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #1D71B8 100%)",
           },
-              },
+        },
       },
     };
   </script>
-  </head>
+</head>
 
-  <body class="bg-[#000D17] text-white font-italiana">
-    <div class="absolute top-0 left-0 z-10">
-      <img src="images/Smoke.png" alt="" class="w-full" />
+<body class="bg-[#000D17] text-white font-italiana">
+  <div class="absolute top-0 left-0 z-10">
+    <img src="images/Smoke.png" alt="" class="w-full" />
+  </div>
+
+  <!-- Header -->
+  <div class="bg-[#000D17] block flex font-sans items-center justify-between md:hidden p-2 px-4 text-white">
+    <div class="text-sm">9:41</div>
+    <div class="flex space-x-3">
+      <div class="w-4 h-4 ">
+        <img src="images/Cellular Connection.svg" alt="">
+      </div>
+      <div class="w-4 h-4 ">
+        <img src="images/Wifi.svg" alt="">
+      </div>
+      <div class="flex items-center space-x-1">
+        <div class="w-6 h-3">
+          <img src="images/Battery.svg" alt="">
+        </div>
+        <div class="w-1 h-2 bg-white"></div>
+      </div>
+    </div>
+  </div>
+
+  <header id="header"
+    class="bg-none duration-300 font-josefin left-0 lg:w-100 md:relative opacity-90 lg:py-10 py-5 relative shadow-lg top-0 transition-colors w-full z-50">
+    <div class="flex items-center justify-between lg:justify-around lg:px-20 mx-auto px-8">
+      <div class="logo flex items-center">
+        <img src="images/logo.png" alt="Logo" class="w-10 h-10 mr-2 md:w-[100px] md:h-[100px]">
+      </div>
+      <!-- Hamburger Menu on the Left -->
+      <button id="menu-toggle" class="text-white text-2xl focus:outline-none md:hidden flex items-center">
+        <img src="images/toggle.svg" alt="Toggle Menu" class="w-8 h-8">
+      </button>
+
+      <!-- Navigation Menu -->
+      <nav id="menu" class="gap-14 hidden md:flex text-sm text-white">
+        <a href="index.html"
+          class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal text-white font-bold">Home</a>
+        <a href="about.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">About</a>
+        <a href="product.html"
+          class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Product</a>
+        <a href="gallery.html"
+          class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Gallery</a>
+        <a href="blog.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Blog</a>
+        <a href="contact_us.html"
+          class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Contact Us</a>
+      </nav>
+
+      <!-- Book A Table Button -->
+      <a href="book.html" class="bg-[#1D71B8] font-normal hidden lg:inline-block md:text-2xl px-6 py-2 text-white">Book
+        A
+        Table</a>
     </div>
 
-    <!-- Header -->
-    <div class="bg-[#000D17] block flex font-sans items-center justify-between md:hidden p-2 px-4 text-white">
-        <div class="text-sm">9:41</div>
-      <div class="flex space-x-3">
-        <div class="w-4 h-4 ">
-          <img src="images/Cellular Connection.svg" alt="">
-        </div>
-        <div class="w-4 h-4 ">
-          <img src="images/Wifi.svg" alt="">
-        </div>
-        <div class="flex items-center space-x-1">
-          <div class="w-6 h-3">
-            <img src="images/Battery.svg" alt="">
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="absolute bg-black left-0 md:hidden px-4 py-6 py-8 space-y-4 text-center text-white top-0 w-full">
+      <button id="close-menu" class="absolute top-4 right-4 text-white text-2xl focus:outline-none">
+        ×
+      </button>
+      <a href="index.html" class="block md:text-2xl hover:text-blue-400">Home</a>
+      <a href="about.html" class="block md:text-2xl hover:text-blue-400">About</a>
+      <a href="product.html" class="block md:text-2xl hover:text-blue-400">Product</a>
+      <a href="gallery.html" class="block md:text-2xl hover:text-blue-400">Gallery</a>
+      <a href="blog.html" class="block md:text-2xl hover:text-blue-400">Blog</a>
+      <a href="contact_us.html" class="block md:text-2xl hover:text-blue-400">Contact Us</a>
+      <a href="book.html" class="block md:text-2xl bg-blue-500 text-white px-4 py-2 rounded-lg">Book A Table</a>
+    </div>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="relative lg:h-[504px] h-[219px] bg-cover bg-center"
+    style="background-image: url('images/Rectangle\ 26.png')">
+    <div class="absolute inset-0 bg-[#00223F] bg-opacity-80"></div>
+    <div class="container flex lg:h-[504px] h-[219px] items-center justify-center mx-auto px-4 relative z-10">
+      <h1 class="font-normal leading-tight mb-4 md:text-[125px] text-[28px] uppercase">
+        BLOG DETAILS
+      </h1>
+    </div>
+  </section>
+
+  <!-- Blog Content -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="mb-8">
+        <p class="text-2xl md:text-6xl font-italiana font-normal mb-6 text-white">
+          Pancakes in Chocolate
+        </p>
+
+        <div class="flex items-center justify-between text-sm text-[#9E9E9E]">
+          <div class="flex items-center space-x-2">
+            <img src="images/Rectangle 86.png" alt="Author Avatar" class="w-[60px] h-[60px]">
+            <span class="font-josefin font-light mb-2 md:text-2xl text-[#9E9E9E] text-sm">Constance Wilkinson</span>
           </div>
-          <div class="w-1 h-2 bg-white"></div>
+
+          <div class="flex items-center space-x-2 bg-gray-800 text-[#9E9E9E] px-3 py-1">
+            <img src="images/calender.svg" class="w-4 h-4 text-blue-400" alt="calender">
+            <span>May 1, 2021</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <header id="header" class="bg-none duration-300 font-josefin left-0 lg:w-100 md:relative opacity-90 lg:py-10 py-5 relative shadow-lg top-0 transition-colors w-full z-50">
-      <div class="flex items-center justify-between lg:justify-around lg:px-20 mx-auto px-8">
-        <div class="logo flex items-center">
-          <img src="images/logo.png" alt="Logo" class="w-10 h-10 mr-2 md:w-[100px] md:h-[100px]">
-        </div>
-        <!-- Hamburger Menu on the Left -->
-        <button id="menu-toggle" class="text-white text-2xl focus:outline-none md:hidden flex items-center">
-          <img src="images/toggle.svg" alt="Toggle Menu" class="w-8 h-8">
-        </button>
-  
-        <!-- Navigation Menu -->
-        <nav id="menu" class="gap-14 hidden md:flex text-sm text-white">
-          <a href="index.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal text-white font-bold">Home</a>
-          <a href="about.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">About</a>
-          <a href="product.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Product</a>
-          <a href="gallery.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Gallery</a>
-          <a href="blog.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Blog</a>
-          <a href="contact_us.html" class="active:font-bold active:text-white text-[#9E9E9E] md:text-2xl font-normal">Contact Us</a>
-        </nav>
-  
-        <!-- Book A Table Button -->
-        <a href="book.html" class="bg-[#1D71B8] font-normal hidden lg:inline-block md:text-2xl px-6 py-2 text-white">Book
-          A
-          Table</a>
+      <!-- Blog Image -->
+      <div class="mb-8">
+        <img src="images/Rectangle 22.png" alt="Pancakes" class=" shadow-lg w-full">
       </div>
-  
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="absolute bg-black left-0 md:hidden px-4 py-6 py-8 space-y-4 text-center text-white top-0 w-full">
-        <button id="close-menu" class="absolute top-4 right-4 text-white text-2xl focus:outline-none">
-          ×
-        </button>
-        <a href="index.html" class="block md:text-2xl hover:text-blue-400">Home</a>
-        <a href="about.html" class="block md:text-2xl hover:text-blue-400">About</a>
-        <a href="product.html" class="block md:text-2xl hover:text-blue-400">Product</a>
-        <a href="gallery.html" class="block md:text-2xl hover:text-blue-400">Gallery</a>
-        <a href="blog.html" class="block md:text-2xl hover:text-blue-400">Blog</a>
-        <a href="contact_us.html" class="block md:text-2xl hover:text-blue-400">Contact Us</a>
-        <a href="book.html" class="block md:text-2xl bg-blue-500 text-white px-4 py-2 rounded-lg">Book A Table</a>
-      </div>
-    </header>
-  
 
-    <!-- Hero Section -->
-    <section
-      class="relative lg:h-[504px] h-[219px] bg-cover bg-center"
-      style="background-image: url('images/Rectangle\ 26.png')"
-    >
-      <div class="absolute inset-0 bg-[#00223F] bg-opacity-80"></div>
-      <div
-        class="container flex lg:h-[504px] h-[219px] items-center justify-center mx-auto px-4 relative z-10"
-      >
-        <h1
-          class="font-normal leading-tight mb-4 md:text-[125px] text-[28px] uppercase"
-        >
-          BLOG DETAILS
-        </h1>
-      </div>
-    </section>
+      <!-- Blog Text -->
+      <p class="font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm">Consectetur adipisicing elit.
+        Soluta, impedit, saepe. Unde minima distinctio officiis amet temporibus, consequuntur dolorem dicta
+        reprehenderit doloremque voluptate voluptas molestiae et pariatur soluta, nemo eos molestias beatae excepturi
+        deleniti. Ea hic perferendis ut possimus. Culpa corrupti unde fugit doloremque omnis aliquam nam, velit,
+        cupiditate quis reiciendis provident dolorum adipisci accusamus. Cum debitis, ipsum est ipsam vitae vel, quam in
+        sint reprehenderit ducimus repudiandae ab et.
+      </p>
 
-    <!-- Blog Content -->
-    <section class="py-16">
-      <div class="container mx-auto px-4">
-        <div class="mb-8">
-          <p
-            class="text-2xl md:text-6xl font-italiana font-normal mb-6 text-white"
-          >
-            Pancakes in Chocolate
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Ingredients Section -->
+        <div>
+          <p class="font-italiana font-normal mb-4 lg:text-6xl text-2xl text-left">
+            Ingredients
           </p>
-
-          <div class="flex items-center justify-between text-sm text-[#9E9E9E]">
-            <div class="flex items-center space-x-2">
-              <img
-                src="images/Rectangle 86.png"
-                alt="Author Avatar"
-                class="w-[60px] h-[60px]"
-              />
-              <span
-                class="font-josefin font-light mb-2 md:text-2xl text-[#9E9E9E] text-sm"
-                >Constance Wilkinson</span
-              >
-            </div>
-
-            <div
-              class="flex items-center space-x-2 bg-gray-800 text-[#9E9E9E] px-3 py-1"
-            >
-              <img
-                src="images/calender.svg"
-                class="w-4 h-4 text-blue-400"
-                alt="calender"
-              />
-              <span>May 1, 2021</span>
-            </div>
-          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center text-gray-300 font-josefin font-light lg:text-2xl mb-4 text-[#9E9E9E] text-left text-sm">
+              <img src="images/Arrow 2.svg" class="md:w-[54px] w-[35px] h-6 text-blue-400 mr-4" alt="arrow2">Dolor sit amet</li>
+            <li class="flex items-center text-gray-300 font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm">
+              <img src="images/Arrow 2.svg" class="md:w-[54px] w-[35px] h-6 text-blue-400 mr-4" alt="arrow2">Maiores distinctio</li>
+            <li class="flex items-center text-gray-300 font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm">
+              <img src="images/Arrow 2.svg" class="md:w-[54px] w-[35px] h-6 text-blue-400 mr-4" alt="arrow2">Expedita sunt repellendus</li>
+            <li class="flex items-center text-gray-300 font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm">
+              <img src="images/Arrow 2.svg" class="md:w-[54px] w-[35px] h-6 text-blue-400 mr-4" alt="arrow2">Corrupti ipsum</li>
+            
+            <li class="flex items-center text-gray-300 font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm">
+              <img src="images/Arrow 2.svg" class="md:w-[54px] w-[35px] h-6 text-blue-400 mr-4" alt="arrow2">Sunt repellendu</li>
+            
+            <li class="flex items-center text-gray-300 font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm">
+              <img src="images/Arrow 2.svg" class="md:w-[54px] w-[35px] h-6 text-blue-400 mr-4" alt="arrow2">Nemo quod maiores</li><li class="flex items-center text-gray-300 font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm">
+              <img src="images/Arrow 2.svg" class="md:w-[54px] w-[35px] h-6 text-blue-400 mr-4" alt="arrow2">Consectetur adipisicing</li>
+          </ul>
         </div>
 
-        <!-- Blog Image -->
-        <div class="mb-8">
-          <img
-            src="images/Rectangle 22.png"
-            alt="Pancakes"
-            class="rounded-lg shadow-lg w-full"
-          />
-        </div>
+        <!-- Video Section -->
+        <div class="relative group">
+          <img src="images/Rectangle 88.png" alt="Video Thumbnail" class=" shadow-lg w-full" style="
+    height: 461px;
+    width: 953px;
+">
 
-        <!-- Blog Text -->
-        <p
-          class="font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
-          ipsum ut eros rhoncus molestie non vitae nulla. Nulla ut ipsum at
-          justo tristique tincidunt ut sed magna.
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Ingredients Section -->
-          <div>
-            <p
-              class="font-italiana font-normal mb-4 lg:text-6xl text-2xl text-left"
-            >
-              Ingredients
-            </p>
-            <ul class="space-y-4 mb-8">
-              <li
-                class="flex items-center text-gray-300 font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm"
-              >
-                <img
-                  src="images/Arrow 2.svg"
-                  class="md:w-[54px] w-[35px] h-6 text-blue-400 mr-4"
-                  alt="arrow2"
-                />
-                Dulce de leche
-              </li>
-              <li
-                class="flex items-center text-gray-300 font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm"
-              >
-                <img
-                  src="images/Arrow 2.svg"
-                  class="md:w-[54px] w-[35px] h-6 text-blue-400 mr-4"
-                  alt="arrow2"
-                />
-                Roasted almonds
-              </li>
-              <li
-                class="flex items-center text-gray-300 font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm"
-              >
-                <img
-                  src="images/Arrow 2.svg"
-                  class="md:w-[54px] w-[35px] h-6 text-blue-400 mr-4"
-                  alt="arrow2"
-                />
-                Dark chocolate
-              </li>
-              <li
-                class="flex items-center text-gray-300 font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm"
-              >
-                <img
-                  src="images/Arrow 2.svg"
-                  class="md:w-[54px] w-[35px] h-6 text-blue-400 mr-4"
-                  alt="arrow2"
-                />
-                Whipped cream
-              </li>
-              <li
-                class="flex items-center text-gray-300 font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm"
-              >
-                <img
-                  src="images/Arrow 2.svg"
-                  class="md:w-[54px] w-[35px] h-6 text-blue-400 mr-4"
-                  alt="arrow2"
-                />
-                Seasonal strawberries
-              </li>
-            </ul>
+          <div class="absolute inset-0 flex items-center justify-center bg-[#000E1B] bg-opacity-70 opacity-0 group-hover:opacity-100 transition duration-300">
+            <button class="border-[#1D71B8] text-white rounded-full p-5 shadow-lg">
+              <!-- Play Icon -->
+              <img src="images/playicon.svg" alt="Play Button" class="w-102 h-102">
+            </button>
           </div>
-
-          <!-- Video Section -->
-          <div class="relative group">
-            <img
-              src="images/Rectangle 88.png"
-              alt="Video Thumbnail"
-              class="rounded-lg shadow-lg w-full"
-            />
-
-            <div
-              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300"
-            >
-              <button
-                class="border-[#1D71B8] text-white rounded-full p-5 shadow-lg"
-              >
-                <!-- Play Icon -->
-                <img
-                  src="images/playicon.svg"
-                  alt="Play Button"
-                  class="w-102 h-102"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Additional Content -->
-        <h2
-          class="font-italiana font-normal mb-4 lg:text-6xl text-2xl text-left"
-        >
-          Culpa corrupti unde fugit
-        </h2>
-        <p
-          class="font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm"
-        >
-          Consectetur adipisicing elit. Soluta, impedit, saepe. Unde minima
-          distinctio officiis amet temporibus, consequuntur dolorem dicta
-          reprehenderit doloremque voluptate voluptas molestiae et pariatur
-          soluta, nemo eos molestias beatae excepturi deleniti. Ea hic
-          perferendis ut possimus. Culpa corrupti unde fugit doloremque omnis
-          aliquam nam, velit, cupiditate quis reiciendis provident dolorum
-          adipisci accusamus. Cum debitis, ipsum est ipsam vitae vel, quam in
-          sint reprehenderit ducimus repudiandae ab et.
-        </p>
-        <p
-          class="font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ipsam
-          culpa esse amet quaerat doloribus nam sequi tempore aspernatur
-          recusandae aliquam expedita eligendi maiores quis obcaecati, illo
-          earum dolorum minima explicabo ea ut, fugiat veniam in. Amet dolores
-          commodi vitae, sint debitis accusantium unde, placeat dolorum
-          necessitatibus reiciendis, explicabo velit.
-        </p>
-
-        <!-- Related Images -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-          <img
-            src="images/cake1.png"
-            alt="Related 1"
-            class="rounded-lg shadow-lg"
-          />
-          <img
-            src="images/cake2.png"
-            alt="Related 2"
-            class="rounded-lg shadow-lg"
-          />
-          <img
-            src="images/cake3.png"
-            alt="Related 3"
-            class="rounded-lg shadow-lg"
-          />
         </div>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-cover font-italiana  text-white" style="background-image: url('images/Footer.png')">
-      <div class="bg-contain bg-no-repeat bg-right container font-italiana  py-12 lg:px-4 mx-auto">
-        <div class="flex flex-col items-center justify-between lg:flex-row lg:space-y-0 mb-6 space-y-6">
-          <div class="flex flex-col gap-4 items-center md:flex-row space-x-4">
-            <img alt="Moonstruck Coffee logo" class="h-[74px] md:h-[101px] md:w-[101px] w-[74px]" src="images/logo.png">
-            <h1 class="md:text-6xl text-2xl font-italiana font-normal text-center lg:text-left">
-              MOONSTRUCK COFFEE
-            </h1>
-          </div>
-          <!-- Social Media Icons -->
-          <div class="flex gap-2 hidden items-center md:flex mr-16">
-            <h2 class="md:text-2xl font-bold">SOCIAL ICONS</h2>
-            <div class="flex space-x-4 items-center">
-              <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2" href="#">
-                <img src="./images/Facebook.svg" alt="">
-              </a>
-              <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2" href="#">
-                <img src="./images/Twitter.svg" alt="">
-              </a>
-              <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2" href="#">
-                <img src="./images/intragram.svg" alt="">
-              </a>
-            </div>
+      <!-- Additional Content -->
+      <h2 class="font-italiana font-normal mb-4 lg:text-6xl text-2xl text-left">
+        Culpa corrupti unde fugit
+      </h2>
+      <p class="font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm">
+        Consectetur adipisicing elit. Soluta, impedit, saepe. Unde minima
+        distinctio officiis amet temporibus, consequuntur dolorem dicta
+        reprehenderit doloremque voluptate voluptas molestiae et pariatur
+        soluta, nemo eos molestias beatae excepturi deleniti. Ea hic
+        perferendis ut possimus. Culpa corrupti unde fugit doloremque omnis
+        aliquam nam, velit, cupiditate quis reiciendis provident dolorum
+        adipisci accusamus. Cum debitis, ipsum est ipsam vitae vel, quam in
+        sint reprehenderit ducimus repudiandae ab et.
+      </p>
+      <p class="font-josefin font-light xl:text-2xl mb-4 text-[#9E9E9E] text-left text-sm">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ipsam
+        culpa esse amet quaerat doloribus nam sequi tempore aspernatur
+        recusandae aliquam expedita eligendi maiores quis obcaecati, illo
+        earum dolorum minima explicabo ea ut, fugiat veniam in. Amet dolores
+        commodi vitae, sint debitis accusantium unde, placeat dolorum
+        necessitatibus reiciendis, explicabo velit.
+      </p>
+
+      <!-- Related Images -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+        <img src="images/cake3.png" alt="Related 3" class=" shadow-lg">
+
+        <img src="images/cake1.png" alt="Related 1" class=" shadow-lg">
+
+        <img src="images/cake2.png" alt="Related 2" class=" shadow-lg">
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-cover font-italiana  text-white" style="background-image: url('images/Footer.png')">
+    <div class="bg-contain bg-no-repeat bg-right container font-italiana  py-12 lg:px-4 mx-auto">
+      <div class="flex flex-col items-center justify-between lg:flex-row lg:space-y-0 mb-6 space-y-6">
+        <div class="flex flex-col gap-4 items-center md:flex-row space-x-4">
+          <img alt="Moonstruck Coffee logo" class="h-[74px] md:h-[101px] md:w-[101px] w-[74px]" src="images/logo.png">
+          <h1 class="md:text-6xl text-2xl font-italiana font-normal text-center lg:text-left">
+            MOONSTRUCK COFFEE
+          </h1>
+        </div>
+        <!-- Social Media Icons -->
+        <div class="flex gap-2 hidden items-center md:flex mr-16">
+          <h2 class="md:text-2xl font-bold">SOCIAL ICONS</h2>
+          <div class="flex space-x-4 items-center">
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/Facebook.svg" alt="">
+            </a>
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/Twitter.svg" alt="">
+            </a>
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/intragram.svg" alt="">
+            </a>
           </div>
         </div>
-  
-        <!-- Bottom Section -->
-        <div class="flex flex-col lg:flex-row justify-between lg:items-start space-y-12 lg:space-y-0">
-          <!-- Left Section -->
-          <div class="">
-            <div class="flex flex-col gap-4 items-center mb-10 md:flex-row md:gap-8 md:mt-0 mt-4">
-              <h2 class="font-josefin font-medium items-center  md:text-2xl md:text-center text-lg uppercase">
-                OUR PAGES
-              </h2>
-              <nav class="flex flex-wrap font-normal gap-4 md:gap-4 md:gap-6">
-                <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition " href="index.html">Home</a>
-                <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition" href="about.html">About</a>
-                <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition" href="product.html">Product</a>
-                <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition" href="gallery.html">Gallery</a>
-                <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition" href="blog.html">Blog</a>
-                <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition" href="contact_us.html">Contact Us</a>
-              </nav>
-            </div>
-            <div class="flex flex-col gap-4 md:gap-8 md:flex-row md:mt-0 mt-4">
-              <h2 class="font-bold font-josefin font-medium md:text-2xl text-[17px]">
-                CONTACT US
-              </h2>
-              <div class="font-josefin font-normal md:text-2xl md:words-wrap text-base transition">
-                <p class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl md:words-wrap text-[#9E9E9E] text-sm transition">
-                  +91 096647 21479 | moonstruckcoffee566@gmail.com
-                </p>
-                <p class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl md:words-wrap mt-4 text-[#9E9E9E] text-sm transition lg:w-[585px]">
-                  SNS Atria Besides Happy Excelencia, opp. Jolly Party Plot,
-                  Vesu, Surat, Gujarat 395007
-                </p>
-              </div>
-            </div>
-          </div>
-  
-          <!-- Right Section -->
-          <div>
-            <h2 class="font-josefin font-medium items-center md:mb-4 md:text-2xl text-lg uppercase">
-              LATEST POSTS
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="flex flex-col lg:flex-row justify-between lg:items-start space-y-12 lg:space-y-0">
+        <!-- Left Section -->
+        <div class="">
+          <div class="flex flex-col gap-4 items-center mb-10 md:flex-row md:gap-8 md:mt-0 mt-4">
+            <h2 class="font-josefin font-medium items-center  md:text-2xl md:text-center text-lg uppercase">
+              OUR PAGES
             </h2>
-            <div class="grid grid-cols-3 md:grid-cols-3 gap-4">
-              <img alt="Image of a coffee cup and a croissant" class="w-full h-24 object-cover " src="./images/footericon.png">
-  
-              <img alt="Image of a dish with vegetables" class="w-full h-24 object-cover " src="images/footericon2.png">
-  
-              <img alt="Image of a coffee cup" class="w-full h-24 object-cover " src="./images/footericon3.png">
-            </div>
+            <nav class="flex flex-wrap font-normal gap-4 md:gap-4 md:gap-6">
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition "
+                href="index.html">Home</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="about.html">About</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="product.html">Product</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="gallery.html">Gallery</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="blog.html">Blog</a>
+              <a class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl text-[#9E9E9E] text-sm transition"
+                href="contact_us.html">Contact Us</a>
+            </nav>
           </div>
-  
-          <!-- Social Media Icons -->
-          <div class="flex flex-col gap-2 md:hidden">
-            <h2 class="md:text-2xl font-bold">SOCIAL ICONS</h2>
-            <div class="flex space-x-4 items-center">
-              <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2" href="#">
-                <img src="./images/Facebook.svg" alt="">
-              </a>
-              <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2" href="#">
-                <img src="./images/Twitter.svg" alt="">
-              </a>
-              <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2" href="#">
-                <img src="./images/intragram.svg" alt="">
-              </a>
+          <div class="flex flex-col gap-4 md:gap-8 md:flex-row md:mt-0 mt-4">
+            <h2 class="font-bold font-josefin font-medium md:text-2xl text-[17px]">
+              CONTACT US
+            </h2>
+            <div class="font-josefin font-normal md:text-2xl md:words-wrap text-base transition">
+              <p
+                class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl md:words-wrap text-[#9E9E9E] text-sm transition">
+                +91 096647 21479 | moonstruckcoffee566@gmail.com
+              </p>
+              <p
+                class="font-josefin font-normal hover:text-[#1D71B8] md:text-2xl md:words-wrap mt-4 text-[#9E9E9E] text-sm transition lg:w-[585px]">
+                SNS Atria Besides Happy Excelencia, opp. Jolly Party Plot,
+                Vesu, Surat, Gujarat 395007
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
 
-  </body>
-   <script src="script.js"></script>
+        <!-- Right Section -->
+        <div>
+          <h2 class="font-josefin font-medium items-center md:mb-4 md:text-2xl text-lg uppercase">
+            LATEST POSTS
+          </h2>
+          <div class="grid grid-cols-3 md:grid-cols-3 gap-4">
+            <img alt="Image of a coffee cup and a croissant" class="w-full h-24 object-cover "
+              src="./images/footericon.png">
+
+            <img alt="Image of a dish with vegetables" class="w-full h-24 object-cover " src="images/footericon2.png">
+
+            <img alt="Image of a coffee cup" class="w-full h-24 object-cover " src="./images/footericon3.png">
+          </div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="flex flex-col gap-2 md:hidden">
+          <h2 class="md:text-2xl font-bold">SOCIAL ICONS</h2>
+          <div class="flex space-x-4 items-center">
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/Facebook.svg" alt="">
+            </a>
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/Twitter.svg" alt="">
+            </a>
+            <a class="text-white text-xl hover:text-blue transition rounded-full border-2 border-[#1D71B8] p-2"
+              href="#">
+              <img src="./images/intragram.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script src="script.js"></script>
+
 </html>
